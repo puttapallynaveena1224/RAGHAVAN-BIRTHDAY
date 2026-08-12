@@ -1,0 +1,275 @@
+#cinematicPage {
+    display: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f7e7dc;
+}
+
+.cinematic-page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 45%,
+        #fff8f2 0%,
+        #f7e7dc 55%,
+        #efd2c2 100%);
+}
+
+/* Small decorative lights */
+
+.sparkle {
+    position: absolute;
+    font-size: 22px;
+    animation: sparkleFloat 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.sparkle.one {
+    top: 15%;
+    left: 15%;
+}
+
+.sparkle.two {
+    top: 22%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.sparkle.three {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 1.5s;
+}
+
+.sparkle.four {
+    bottom: 18%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+@keyframes sparkleFloat {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: .7;
+    }
+
+    50% {
+        transform: translateY(-12px) scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* Heading */
+
+.cinematic-title {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    color: #d6336c;
+    font-size: clamp(28px, 6vw, 48px);
+    margin: 0;
+}
+
+.cinematic-subtitle {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    color: #795548;
+    font-size: 16px;
+}
+
+/* Heart */
+
+.cinematic-heart {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    z-index: 5;
+}
+
+.heart-shape {
+    font-size: clamp(85px, 20vw, 150px);
+    display: block;
+    filter:
+        drop-shadow(0 0 12px rgba(255, 64, 129, .45))
+        drop-shadow(0 8px 18px rgba(180, 30, 80, .25));
+
+    animation: heartbeat 1.3s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+/* Bow */
+
+.bow-area {
+    position: absolute;
+    left: 7%;
+    bottom: 15%;
+    width: 180px;
+    height: 180px;
+    z-index: 4;
+}
+
+.bow {
+    position: relative;
+    width: 120px;
+    height: 160px;
+    border: 9px solid #7b4a2d;
+    border-left: none;
+    border-radius: 0 100% 100% 0;
+    transform: rotate(-20deg);
+}
+
+.bow-string {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 160px;
+    background: #6d5848;
+}
+
+/* Arrow */
+
+.arrow {
+    position: absolute;
+    left: 75px;
+    top: 65px;
+    width: 140px;
+    height: 5px;
+    background: #704214;
+    transform-origin: left center;
+    transform: rotate(-15deg);
+    z-index: 6;
+}
+
+.arrow::after {
+    content: "❤️";
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    font-size: 35px;
+}
+
+/* Hint */
+
+.cinematic-hint {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8a6a58;
+    font-size: 15px;
+}
+
+/* Continue button */
+
+.enter-button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 13px 28px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4081;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, .3);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.enter-button.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.enter-button:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Heart hit animation */
+
+.heart-hit {
+    animation: heartHit .8s ease forwards !important;
+}
+
+@keyframes heartHit {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .bow-area {
+        left: 2%;
+        bottom: 18%;
+        transform: scale(.8);
+        transform-origin: left bottom;
+    }
+
+    .cinematic-title {
+        top: 10%;
+    }
+
+    .cinematic-subtitle {
+        top: 19%;
+    }
+
+    .heart-shape {
+        font-size: 100px;
+    }
+}

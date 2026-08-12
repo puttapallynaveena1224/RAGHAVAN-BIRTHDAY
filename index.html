@@ -1,0 +1,3642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Happy Birthday Raghavan 💙</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    text-align: center;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #bbdefb,
+            #90caf9
+        );
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+button {
+
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #1565c0;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+button:hover {
+
+    background: #0d47a1;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.box {
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 35px 25px;
+
+    background: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.cake {
+
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+.box h1 {
+
+    color: #1565c0;
+
+    margin-bottom: 10px;
+}
+
+.box p {
+
+    font-size: 18px;
+
+    color: #555;
+
+    margin: 8px 0;
+}
+
+input {
+
+    width: 80%;
+
+    max-width: 350px;
+
+    padding: 13px;
+
+    border:
+        2px solid
+        #64b5f6;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    margin-top: 10px;
+}
+
+input:focus {
+
+    border-color: #1565c0;
+}
+
+#error {
+
+    color: red;
+
+    min-height: 20px;
+}
+
+
+/* =========================================================
+   CINEMATIC ARROW PAGE
+========================================================= */
+
+#cinematicPage {
+
+    display: none;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 35px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,0.45),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #64b5f6,
+            #2196f3,
+            #0d47a1
+        );
+}
+
+.cinematic-title {
+
+    font-size: 42px;
+
+    color: white;
+
+    margin-top: 25px;
+
+    text-shadow:
+        0 4px 10px
+        rgba(0,0,0,0.2);
+}
+
+.cinematic-subtitle {
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   HEART
+========================================================= */
+
+.cinematic-heart {
+
+    background: transparent;
+
+    border: none;
+
+    padding: 0;
+
+    margin-top: 25px;
+
+    cursor: pointer;
+}
+
+.heart-shape {
+
+    display: inline-block;
+
+    font-size: 105px;
+
+    filter:
+        drop-shadow(
+            0 8px 12px
+            rgba(0,0,0,0.2)
+        );
+
+    animation:
+        heartbeat
+        1.2s
+        infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+}
+
+.heart-hit {
+
+    animation:
+        heartHit
+        0.45s
+        ease
+        forwards;
+}
+
+@keyframes heartHit {
+
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.45);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================================================
+   ARROW AREA
+========================================================= */
+
+.arrow-area {
+
+    position: relative;
+
+    width: 340px;
+
+    height: 230px;
+
+    margin: 5px auto 0;
+}
+
+.bow {
+
+    position: absolute;
+
+    left: 15px;
+
+    bottom: 30px;
+
+    width: 125px;
+
+    height: 145px;
+
+    border:
+        7px solid
+        #654321;
+
+    border-left: none;
+
+    border-radius:
+        0 100% 100% 0;
+
+    transform:
+        rotate(-10deg);
+}
+
+.bow-string {
+
+    position: absolute;
+
+    left: -5px;
+
+    top: 0;
+
+    width: 4px;
+
+    height: 145px;
+
+    background: white;
+}
+
+
+/* =========================================================
+   CURVED SVG ARROW
+========================================================= */
+
+.arrow-svg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: visible;
+
+    z-index: 20;
+
+    pointer-events: auto;
+}
+
+#curvePath {
+
+    fill: none;
+
+    stroke: transparent;
+
+    stroke-width: 2;
+}
+
+.arrow-group {
+
+    transform-origin: 0 0;
+
+    pointer-events: none;
+}
+
+#arrowLine {
+
+    stroke: #654321;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+}
+
+#arrowHead {
+
+    fill: #654321;
+}
+
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.sparkle {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    animation:
+        sparkleFloat
+        3s
+        ease-in-out
+        infinite;
+}
+
+.sparkle.one {
+
+    top: 10%;
+
+    left: 10%;
+}
+
+.sparkle.two {
+
+    top: 20%;
+
+    right: 10%;
+}
+
+.sparkle.three {
+
+    bottom: 20%;
+
+    left: 15%;
+}
+
+.sparkle.four {
+
+    bottom: 15%;
+
+    right: 15%;
+}
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+        opacity: 0.7;
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px);
+
+        opacity: 1;
+    }
+}
+
+.cinematic-hint {
+
+    color: white;
+
+    font-size: 16px;
+
+    margin-top: -5px;
+}
+
+
+/* =========================================================
+   ENTER BUTTON
+========================================================= */
+
+.enter-button {
+
+    background: white;
+
+    color: #1565c0;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+}
+
+.enter-button:hover {
+
+    background: #e3f2fd;
+}
+
+
+/* =========================================================
+   SURPRISE
+========================================================= */
+
+#surprise {
+
+    display: none;
+
+    width: 100%;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   ALL PAGES
+========================================================= */
+
+.page {
+
+    display: none;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 35px 25px;
+
+    background: white;
+
+    animation:
+        pageFade
+        0.5s
+        ease;
+}
+
+.page.active {
+
+    display: block;
+}
+
+@keyframes pageFade {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* =========================================================
+   PAGE 1 - HAPPY BIRTHDAY ANIMATION
+========================================================= */
+
+.animation-page {
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #90caf9 0%,
+            #42a5f5 35%,
+            #1565c0 70%,
+            #0d47a1 100%
+        );
+}
+
+.animation-page.active {
+
+    display: flex;
+}
+
+.animation-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.4),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        glowAnimation
+        4s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+@keyframes glowAnimation {
+
+    from {
+
+        transform:
+            scale(0.8);
+
+        opacity: 0.5;
+    }
+
+    to {
+
+        transform:
+            scale(1.15);
+
+        opacity: 0.9;
+    }
+}
+
+.birthday-animation-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    color: white;
+
+    text-align: center;
+
+    animation:
+        birthdayAppear
+        1.8s
+        cubic-bezier(.17,.67,.25,1.3);
+}
+
+@keyframes birthdayAppear {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.5)
+            translateY(40px);
+    }
+
+    70% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.08)
+            translateY(0);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+.animation-title {
+
+    font-size:
+        clamp(
+            50px,
+            10vw,
+            120px
+        );
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    text-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.25);
+}
+
+.animation-name {
+
+    margin-top: 25px;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size:
+        clamp(
+            45px,
+            8vw,
+            85px
+        );
+
+    animation:
+        nameAppear
+        1.2s
+        ease
+        0.8s
+        both;
+}
+
+@keyframes nameAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+.animation-heart {
+
+    display: inline-block;
+
+    margin-left: 8px;
+
+    animation:
+        heartbeat
+        1.4s
+        infinite;
+}
+
+
+/* =========================================================
+   PAPER CUT EFFECT
+   SMALL PAPERS
+========================================================= */
+
+.paper-container {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 9999;
+}
+
+.paper-piece {
+
+    position: absolute;
+
+    top: -30px;
+
+    width: 9px;
+
+    height: 14px;
+
+    opacity: 0;
+
+    border-radius: 2px;
+
+    animation:
+        paperFall
+        2.5s
+        linear
+        forwards;
+}
+
+@keyframes paperFall {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate3d(
+                0,
+                -40px,
+                0
+            )
+            rotate(0deg)
+            scale(0.7);
+    }
+
+    10% {
+
+        opacity: 1;
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translate3d(
+                var(--drift),
+                50vh,
+                0
+            )
+            rotate(var(--rotation))
+            scale(1);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate3d(
+                calc(var(--drift) * -0.5),
+                115vh,
+                0
+            )
+            rotate(
+                calc(var(--rotation) * 2)
+            )
+            scale(0.8);
+    }
+}
+
+
+/* =========================================================
+   PAPER BURST
+========================================================= */
+
+.paper-burst {
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 45%;
+
+    width: 0;
+
+    height: 0;
+
+    pointer-events: none;
+
+    z-index: 10000;
+}
+
+.paper-burst-piece {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 9px;
+
+    height: 15px;
+
+    border-radius: 2px;
+
+    opacity: 0;
+
+    animation:
+        paperBurst
+        1.5s
+        ease-out
+        forwards;
+}
+
+@keyframes paperBurst {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(0,0)
+            rotate(0deg)
+            scale(0.3);
+    }
+
+    15% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--bx),
+                var(--by)
+            )
+            rotate(var(--br))
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 50;
+}
+
+.navigation button {
+
+    margin: 5px;
+}
+
+.page-indicator {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 50;
+}
+
+.dot {
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    margin: 0 4px;
+
+    background: #ccc;
+
+    border-radius: 50%;
+
+    transition:
+        all 0.3s ease;
+}
+
+.active-dot {
+
+    width: 22px;
+
+    border-radius: 10px;
+
+    background: #1565c0;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.message {
+
+    line-height: 1.7;
+
+    color: #444;
+
+    max-width: 700px;
+
+    margin: 15px auto;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.birthday-photo {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin-top: 20px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.2);
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-title {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    margin-bottom: 15px;
+
+    color: #1565c0;
+
+    font-size: 26px;
+}
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 15px;
+
+    max-width: 700px;
+
+    margin:
+        15px auto;
+}
+
+.gallery img {
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.15);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.gallery img:hover {
+
+    transform:
+        scale(1.03);
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.birthday-video {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-top: 15px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.18);
+}
+
+
+/* =========================================================
+   LEVEL 19
+========================================================= */
+
+.level-page {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #bbdefb,
+            #ffffff
+        );
+}
+
+.level-badge {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    margin-top: 10px;
+
+    border-radius: 20px;
+
+    background: #1565c0;
+
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.level-title {
+
+    color: #0d47a1;
+
+    font-size: 34px;
+
+    margin: 20px 0 5px;
+}
+
+.level-number {
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+    color: #1565c0;
+
+    text-shadow:
+        0 5px 15px
+        rgba(21,101,192,0.2);
+
+    margin: 5px 0;
+}
+
+.level-subtitle {
+
+    color: #455a64;
+
+    font-size: 21px;
+}
+
+.chapter-line {
+
+    color: #546e7a;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.level-progress-container {
+
+    max-width: 650px;
+
+    margin: 25px auto;
+}
+
+.progress-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #1565c0;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 15px;
+
+    background: #dbeafe;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+
+    width: 19%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #64b5f6,
+            #1565c0
+        );
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievement-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    max-width: 800px;
+
+    margin: 20px auto;
+}
+
+.achievement {
+
+    width: 200px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.1);
+
+    color: #455a64;
+
+    line-height: 1.5;
+}
+
+.achievement-icon {
+
+    display: block;
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+.achievement strong {
+
+    display: block;
+
+    color: #1565c0;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.countdown-box {
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.12);
+}
+
+.countdown-title {
+
+    color: #1565c0;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.time-box {
+
+    min-width: 90px;
+
+    padding: 15px 10px;
+
+    border-radius: 15px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #42a5f5,
+            #1565c0
+        );
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px
+        rgba(21,101,192,0.2);
+}
+
+.time-number {
+
+    display: block;
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+.time-label {
+
+    font-size: 13px;
+}
+
+.level-message {
+
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    color: #455a64;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.next-level {
+
+    color: #1565c0;
+
+    font-weight: bold;
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   PAGE 6
+========================================================= */
+
+.chapter-page {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #bbdefb,
+            #ffffff
+        );
+
+    padding-top: 45px;
+}
+
+.chapter-label {
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    color: #64b5f6;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.chapter-title {
+
+    color: #0d47a1;
+
+    font-size: 38px;
+
+    margin: 5px 0 10px;
+}
+
+.chapter-subtitle {
+
+    color: #546e7a;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.chapter-card {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    text-align: left;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(13,71,161,0.12);
+
+    border-left:
+        5px solid #1976d2;
+}
+
+.chapter-number {
+
+    color: #64b5f6;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.chapter-card h2 {
+
+    color: #1565c0;
+
+    margin-top: 0;
+
+    font-size: 26px;
+}
+
+.chapter-card p {
+
+    color: #455a64;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin: 18px 0;
+}
+
+.chapter-card .highlight {
+
+    color: #1565c0;
+
+    font-weight: bold;
+}
+
+.chapter-quote {
+
+    max-width: 600px;
+
+    margin: 25px auto;
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color: #1565c0;
+
+    background:
+        #e3f2fd;
+
+    border-radius: 20px;
+}
+
+.chapter-ending {
+
+    margin-top: 25px;
+
+    color: #0d47a1;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PAGE 7
+========================================================= */
+
+.final-page {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #bbdefb
+        );
+}
+
+.final-message {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #bbdefb
+        );
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.1);
+}
+
+.final-message h2 {
+
+    color: #1565c0;
+
+    margin-bottom: 10px;
+}
+
+.final-message p {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #455a64;
+
+    margin: 12px 0;
+}
+
+.final-hearts {
+
+    font-size: 25px;
+
+    margin-top: 15px;
+
+    letter-spacing: 5px;
+}
+
+.birthday-today {
+
+    color: #1565c0;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:600px) {
+
+    .cinematic-title {
+        font-size: 30px;
+    }
+
+    .cinematic-subtitle {
+        font-size: 17px;
+    }
+
+    .heart-shape {
+        font-size: 85px;
+    }
+
+    .arrow-area {
+        transform: scale(0.82);
+        margin-top: -5px;
+        margin-bottom: -15px;
+    }
+
+    .gallery {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .level-number {
+        font-size: 75px;
+    }
+
+    .level-title {
+        font-size: 27px;
+    }
+
+    .achievement {
+        width: 90%;
+    }
+
+    .time-box {
+        min-width: 70px;
+        padding: 12px 8px;
+    }
+
+    .time-number {
+        font-size: 24px;
+    }
+
+    .chapter-title {
+        font-size: 30px;
+    }
+
+    .chapter-card {
+        padding: 22px;
+    }
+
+    .chapter-card p {
+        font-size: 16px;
+    }
+
+    .animation-title {
+        font-size: 52px;
+    }
+
+    .animation-name {
+        font-size: 50px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     LOGIN
+========================================================= -->
+
+<div class="box" id="login">
+
+    <div class="cake">
+        🎂
+    </div>
+
+    <h1>
+        Birthday Surprise 🎁
+    </h1>
+
+    <p>
+        Enter the secret password 💙
+    </p>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+    >
+
+    <button onclick="checkPassword()">
+        Open Surprise 💙
+    </button>
+
+    <p id="error"></p>
+
+</div>
+
+
+<!-- =========================================================
+     ARROW SURPRISE
+========================================================= -->
+
+<div id="cinematicPage">
+
+    <div class="sparkle one">
+        ✨
+    </div>
+
+    <div class="sparkle two">
+        💫
+    </div>
+
+    <div class="sparkle three">
+        ✨
+    </div>
+
+    <div class="sparkle four">
+        💙
+    </div>
+
+
+    <h1 class="cinematic-title">
+        A Little Surprise For You 💙
+    </h1>
+
+    <p class="cinematic-subtitle">
+        Something special is waiting...
+    </p>
+
+
+    <button
+        class="cinematic-heart"
+        id="cinematicHeart"
+        onclick="shootArrow()"
+    >
+
+        <span
+            class="heart-shape"
+            id="heartShape"
+        >
+            ❤️
+        </span>
+
+    </button>
+
+
+    <!-- ARROW -->
+
+    <div class="arrow-area">
+
+        <div class="bow">
+
+            <div class="bow-string"></div>
+
+        </div>
+
+
+        <svg
+            class="arrow-svg"
+            id="arrowSvg"
+            viewBox="0 0 340 230"
+        >
+
+            <!-- REAL CURVED PATH -->
+
+            <path
+                id="curvePath"
+                d="
+                    M 55 175
+                    C 80 105,
+                      145 45,
+                      245 25
+                    C 270 20,
+                      285 18,
+                      300 12
+                "
+            ></path>
+
+
+            <g
+                class="arrow-group"
+                id="arrowGroup"
+            >
+
+                <line
+                    id="arrowLine"
+                    x1="0"
+                    y1="0"
+                    x2="48"
+                    y2="0"
+                ></line>
+
+                <polygon
+                    id="arrowHead"
+                    points="
+                        48,0
+                        34,-9
+                        34,9
+                    "
+                ></polygon>
+
+            </g>
+
+        </svg>
+
+    </div>
+
+
+    <p class="cinematic-hint">
+        Tap the arrow to hit the heart 🏹❤️
+    </p>
+
+
+    <button
+        class="enter-button"
+        onclick="openSurprise()"
+    >
+        Enter Surprise 💙
+    </button>
+
+</div>
+
+
+<!-- =========================================================
+     SURPRISE
+========================================================= -->
+
+<div id="surprise">
+
+
+<!-- =========================================================
+     PAGE 1
+========================================================= -->
+
+<div
+    class="page animation-page active"
+    id="page1"
+>
+
+    <div class="animation-glow"></div>
+
+    <!-- PAPER EFFECT CONTAINERS -->
+
+    <div
+        class="paper-container"
+        id="paperContainer"
+    ></div>
+
+    <div
+        class="paper-burst"
+        id="paperBurst"
+    ></div>
+
+
+    <div class="birthday-animation-content">
+
+        <div class="animation-title">
+
+            Happy<br>
+            Birthday
+
+        </div>
+
+
+        <div class="animation-name">
+
+            Raghavan
+
+            <span class="animation-heart">
+                ♥
+            </span>
+
+        </div>
+
+
+        <div class="navigation">
+
+            <button onclick="backToArrowSurprise()">
+                ← Back
+            </button>
+
+            <button onclick="nextPage()">
+                Next →
+            </button>
+
+        </div>
+
+
+        <div class="page-indicator">
+
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE 2
+========================================================= -->
+
+<div
+    class="page"
+    id="page2"
+>
+
+    <div class="cake">
+        🎂
+    </div>
+
+    <h1>
+        Happy Birthday Raghavan! 🥳
+    </h1>
+
+    <p class="message">
+
+        Wishing you a beautiful birthday
+        filled with happiness, smiles and
+        unforgettable memories! 💙
+
+    </p>
+
+    <p>
+        May all your dreams come true. ✨
+    </p>
+
+    <h2>
+        Brother from another mother 💙
+    </h2>
+
+    <p>
+        🎈 🎉 🎂 🎁 💐 🎊
+    </p>
+
+    <img
+        src="Photos/photo1.jpeg"
+        alt="Birthday Photo"
+        class="birthday-photo"
+    >
+
+
+    <div class="navigation">
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+    </div>
+
+
+    <div class="page-indicator">
+
+        <span class="dot"></span>
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE 3
+========================================================= -->
+
+<div
+    class="page"
+    id="page3"
+>
+
+    <h2 class="gallery-title">
+        Our Memories 💙
+    </h2>
+
+
+    <div class="gallery">
+
+        <img
+            src="Photos/photo7.jpeg"
+            alt="Memory 7"
+        >
+
+        <img
+            src="Photos/photo2.jpeg"
+            alt="Memory 2"
+        >
+
+        <img
+            src="Photos/photo3.jpeg"
+            alt="Memory 3"
+        >
+
+        <img
+            src="Photos/photo4.jpeg"
+            alt="Memory 4"
+        >
+
+        <img
+            src="Photos/photo5.jpeg"
+            alt="Memory 5"
+        >
+
+        <img
+            src="Photos/photo6.jpeg"
+            alt="Memory 6"
+        >
+
+    </div>
+
+
+    <div class="navigation">
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+    </div>
+
+
+    <div class="page-indicator">
+
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE 4
+========================================================= -->
+
+<div
+    class="page"
+    id="page4"
+>
+
+    <div class="cake">
+        🎥
+    </div>
+
+    <h2 class="gallery-title">
+        A Special Memory 💙
+    </h2>
+
+    <p>
+        A little memory just for you! 🥹💙
+    </p>
+
+
+    <video
+        class="birthday-video"
+        controls
+        preload="metadata"
+    >
+
+        <source
+            src="Videos/video1.mp4"
+            type="video/mp4"
+        >
+
+        Your browser does not support
+        the video tag.
+
+    </video>
+
+
+    <div class="navigation">
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+    </div>
+
+
+    <div class="page-indicator">
+
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE 5
+========================================================= -->
+
+<div
+    class="page level-page"
+    id="page5"
+>
+
+    <div class="cake">
+        🎮
+    </div>
+
+    <div class="level-badge">
+        LEVEL 19 UNLOCKED
+    </div>
+
+    <h1 class="level-title">
+        A New Chapter Begins 💙
+    </h1>
+
+    <div class="level-number">
+        19
+    </div>
+
+    <p class="level-subtitle">
+        A brand new level of life begins ✨
+    </p>
+
+    <p class="chapter-line">
+        19 years • countless memories • endless possibilities 💫
+    </p>
+
+
+    <div class="level-progress-container">
+
+        <div class="progress-label">
+
+            <span>
+                Life Progress
+            </span>
+
+            <span>
+                LEVEL 19
+            </span>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+            <div class="progress-fill"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="achievement-container">
+
+        <div class="achievement">
+
+            <span class="achievement-icon">
+                🏆
+            </span>
+
+            <strong>
+                19 Years
+            </strong>
+
+            Memories unlocked
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span class="achievement-icon">
+                💙
+            </span>
+
+            <strong>
+                Countless Memories
+            </strong>
+
+            Moments to remember
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span class="achievement-icon">
+                ✨
+            </span>
+
+            <strong>
+                Infinite Possibilities
+            </strong>
+
+            Future waiting
+
+        </div>
+
+    </div>
+
+
+    <div class="countdown-box">
+
+        <div class="countdown-title">
+            🎂 COUNTING DOWN TO SEPTEMBER 15 🎂
+        </div>
+
+
+        <div
+            class="countdown"
+            id="countdown"
+        >
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="days"
+                >
+                    00
+                </span>
+
+                <span class="time-label">
+                    DAYS
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="hours"
+                >
+                    00
+                </span>
+
+                <span class="time-label">
+                    HOURS
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="minutes"
+                >
+                    00
+                </span>
+
+                <span class="time-label">
+                    MINUTES
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="seconds"
+                >
+                    00
+                </span>
+
+                <span class="time-label">
+                    SECONDS
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <p class="level-message">
+
+        May Level 19 bring you
+        <strong>more happiness</strong>,
+        more adventures,
+        more success and
+        beautiful memories. 💙
+
+        <br><br>
+
+        Your next chapter is waiting...
+
+        <strong>
+            Make it unforgettable! ✨
+        </strong>
+
+    </p>
+
+
+    <div class="next-level">
+        🎮 READY FOR THE NEXT LEVEL? 🎮
+    </div>
+
+
+    <div class="navigation">
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+    </div>
+
+
+    <div class="page-indicator">
+
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE 6
+========================================================= -->
+
+<div
+    class="page chapter-page"
+    id="page6"
+>
+
+    <div class="chapter-label">
+        CHAPTER 06
+    </div>
+
+
+    <h1 class="chapter-title">
+        Who Is Raghavan? 💙
+    </h1>
+
+
+    <p class="chapter-subtitle">
+        A chapter written about someone truly special...
+    </p>
+
+
+    <div class="chapter-card">
+
+        <div class="chapter-number">
+            THE PERSON BEHIND THE NAME
+        </div>
+
+
+        <h2>
+            Raghavan — More Than Just a Friend
+        </h2>
+
+
+        <p>
+
+            Raghavan ni describe cheyyalante
+            simple ga "friend" ani cheppadam
+            chala takkuva anipisthundi.
+
+            Endukante nuvvu na life lo oka
+            different kind of person.
+
+        </p>
+
+
+        <p>
+
+            Nuvvu
+            <span class="highlight">
+                chala manchivadivi
+            </span>.
+
+            Helping nature ante neelo
+            naturally untundi.
+
+            Evarikaina help kavali ante
+            possible ayinantha varaku
+            help cheyyadaniki mundhuku vasthav.
+
+        </p>
+
+
+        <p>
+
+            Inka nee knowledge gurinchi
+            cheppali ante...
+
+            <span class="highlight">
+                Topper + masthu knowledge
+            </span>.
+
+            Edaina topic gurinchi matladithe
+            konchem aina kothaga nerchukune
+            chance untundi.
+
+        </p>
+
+
+        <p>
+
+            But annitikante naku nachhedi
+            nee character.
+
+            Especially girls patla nuvvu
+            chupinche
+            <span class="highlight">
+                respect
+            </span>
+            chala genuine ga untundi.
+
+        </p>
+
+
+        <p>
+
+            Nee way of talking kuda chala
+            different.
+
+            Comfortable ga, respectful ga
+            matladathav.
+
+            And somehow conversations
+            always feel easy.
+
+        </p>
+
+
+        <p>
+
+            But annitikante special thing
+            enti ante...
+
+            <span class="highlight">
+                Nannu sister la treat chesthav.
+            </span>
+
+        </p>
+
+
+        <p>
+
+            Adi naaku chala valuable.
+
+            Because not every friendship
+            needs a label.
+
+            Konni relationships ki
+            oka genuine respect,
+            understanding and trust
+            unte chaalu.
+
+        </p>
+
+
+        <div class="chapter-quote">
+
+            "Some people enter our lives
+            as friends and slowly become
+            a beautiful part of our story." 💙
+
+        </div>
+
+
+        <p class="chapter-ending">
+
+            And Raghavan,
+            you're definitely one of those
+            people in my story. 💙
+
+        </p>
+
+    </div>
+
+
+    <div class="navigation">
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+    </div>
+
+
+    <div class="page-indicator">
+
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE 7
+========================================================= -->
+
+<div
+    class="page final-page"
+    id="page7"
+>
+
+    <div class="cake">
+        💙
+    </div>
+
+
+    <div class="final-message">
+
+        <h2>
+            Once Again,
+            Happy Birthday! 🎂💙
+        </h2>
+
+
+        <p>
+
+            Welcome to Level 19! 🎮✨
+
+            <br><br>
+
+            May this new chapter of your life
+            bring you more happiness,
+            success, adventures and
+            beautiful memories.
+
+        </p>
+
+
+        <p>
+
+            You're not just a friend,
+            you're family. 🫂💙
+
+        </p>
+
+
+        <p>
+
+            Keep smiling.
+            Keep growing.
+            Keep achieving your dreams. ✨
+
+        </p>
+
+
+        <div class="final-hearts">
+            💙 💙 ❤️ 💙 💙
+        </div>
+
+    </div>
+
+
+    <div class="navigation">
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+    </div>
+
+
+    <div class="page-indicator">
+
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active-dot"></span>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+/* =========================================================
+   GLOBAL VARIABLES
+========================================================= */
+
+let currentPage = 1;
+
+const totalPages = 7;
+
+let arrowIsMoving = false;
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+function checkPassword() {
+
+    const password =
+        document.getElementById("password").value;
+
+    const error =
+        document.getElementById("error");
+
+
+    if (
+        password.trim().toLowerCase() ===
+        "raghavan"
+    ) {
+
+        document
+            .getElementById("login")
+            .style.display = "none";
+
+        document
+            .getElementById("cinematicPage")
+            .style.display = "block";
+
+        error.innerText = "";
+
+        resetArrow();
+
+    }
+
+    else {
+
+        error.innerText =
+            "Wrong password 💙 Try again!";
+
+    }
+
+}
+
+
+/* =========================================================
+   OPEN SURPRISE
+========================================================= */
+
+function openSurprise() {
+
+    document
+        .getElementById("cinematicPage")
+        .style.display = "none";
+
+
+    document
+        .getElementById("surprise")
+        .style.display = "block";
+
+
+    showPage(1);
+
+
+    /*
+       PAPER EFFECT
+    */
+
+    startPaperEffect();
+
+}
+
+
+/* =========================================================
+   PAGE SYSTEM
+========================================================= */
+
+function showPage(pageNumber) {
+
+    if (
+        pageNumber < 1 ||
+        pageNumber > totalPages
+    ) {
+
+        return;
+
+    }
+
+
+    for (
+        let i = 1;
+        i <= totalPages;
+        i++
+    ) {
+
+        const page =
+            document.getElementById(
+                "page" + i
+            );
+
+
+        if (page) {
+
+            page.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+
+
+    const selectedPage =
+        document.getElementById(
+            "page" + pageNumber
+        );
+
+
+    if (selectedPage) {
+
+        selectedPage.classList.add(
+            "active"
+        );
+
+    }
+
+
+    currentPage =
+        pageNumber;
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================================================
+   NEXT
+========================================================= */
+
+function nextPage() {
+
+    if (
+        currentPage <
+        totalPages
+    ) {
+
+        showPage(
+            currentPage + 1
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   PREVIOUS
+========================================================= */
+
+function previousPage() {
+
+    if (
+        currentPage >
+        1
+    ) {
+
+        showPage(
+            currentPage - 1
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   BACK TO ARROW
+========================================================= */
+
+function backToArrowSurprise() {
+
+    document
+        .getElementById("surprise")
+        .style.display = "none";
+
+
+    document
+        .getElementById("cinematicPage")
+        .style.display = "block";
+
+
+    resetArrow();
+
+}
+
+
+/* =========================================================
+   RESET ARROW
+========================================================= */
+
+function resetArrow() {
+
+    arrowIsMoving = false;
+
+
+    const arrowGroup =
+        document.getElementById(
+            "arrowGroup"
+        );
+
+    const heart =
+        document.getElementById(
+            "heartShape"
+        );
+
+
+    if (arrowGroup) {
+
+        arrowGroup.style.display =
+            "block";
+
+        arrowGroup.style.transform =
+            "translate(0,0) rotate(0deg)";
+
+    }
+
+
+    if (heart) {
+
+        heart.classList.remove(
+            "heart-hit"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CURVED ARROW SHOOT
+========================================================= */
+
+function shootArrow() {
+
+    if (arrowIsMoving) {
+
+        return;
+
+    }
+
+
+    arrowIsMoving = true;
+
+
+    const svg =
+        document.getElementById(
+            "arrowSvg"
+        );
+
+    const path =
+        document.getElementById(
+            "curvePath"
+        );
+
+    const arrowGroup =
+        document.getElementById(
+            "arrowGroup"
+        );
+
+    const heart =
+        document.getElementById(
+            "heartShape"
+        );
+
+
+    if (
+        !svg ||
+        !path ||
+        !arrowGroup
+    ) {
+
+        arrowIsMoving = false;
+
+        return;
+
+    }
+
+
+    /*
+       REAL SVG CURVED PATH
+    */
+
+    const totalLength =
+        path.getTotalLength();
+
+
+    const duration =
+        1500;
+
+
+    const startTime =
+        performance.now();
+
+
+    function animateArrow(now) {
+
+        let progress =
+            (now - startTime) /
+            duration;
+
+
+        if (progress > 1) {
+
+            progress = 1;
+
+        }
+
+
+        /*
+           Smooth movement
+        */
+
+        const eased =
+            1 -
+            Math.pow(
+                1 - progress,
+                3
+            );
+
+
+        /*
+           Get point ON CURVE
+        */
+
+        const point =
+            path.getPointAtLength(
+                totalLength * eased
+            );
+
+
+        /*
+           Get next point to calculate
+           arrow direction
+        */
+
+        const nextPoint =
+            path.getPointAtLength(
+                Math.min(
+                    totalLength,
+                    totalLength * eased + 2
+                )
+            );
+
+
+        /*
+           Calculate angle
+        */
+
+        const angle =
+            Math.atan2(
+                nextPoint.y - point.y,
+                nextPoint.x - point.x
+            ) *
+            180 /
+            Math.PI;
+
+
+        /*
+           Move arrow exactly
+           along curved path
+        */
+
+        arrowGroup.setAttribute(
+            "transform",
+            "translate(" +
+            point.x +
+            "," +
+            point.y +
+            ") rotate(" +
+            angle +
+            ")"
+        );
+
+
+        /*
+           Continue
+        */
+
+        if (progress < 1) {
+
+            requestAnimationFrame(
+                animateArrow
+            );
+
+        }
+
+        else {
+
+            /*
+               HIT HEART
+            */
+
+            if (heart) {
+
+                heart.classList.add(
+                    "heart-hit"
+                );
+
+            }
+
+
+            /*
+               Small delay after hit
+               then automatically open
+               Birthday page
+            */
+
+            setTimeout(
+                function() {
+
+                    openSurprise();
+
+                    arrowIsMoving =
+                        false;
+
+                },
+                300
+            );
+
+        }
+
+    }
+
+
+    requestAnimationFrame(
+        animateArrow
+    );
+
+}
+
+
+/* =========================================================
+   PAPER CUT EFFECT
+========================================================= */
+
+function startPaperEffect() {
+
+    const container =
+        document.getElementById(
+            "paperContainer"
+        );
+
+    const burst =
+        document.getElementById(
+            "paperBurst"
+        );
+
+
+    if (
+        !container ||
+        !burst
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+       CLEAR OLD PAPERS
+    */
+
+    container.innerHTML = "";
+
+    burst.innerHTML = "";
+
+
+    const colors = [
+
+        "#ffffff",
+        "#e3f2fd",
+        "#bbdefb",
+        "#90caf9",
+        "#64b5f6",
+        "#42a5f5"
+
+    ];
+
+
+    /* =====================================================
+       FALLING PAPERS
+    ===================================================== */
+
+    const paperCount = 110;
+
+
+    for (
+        let i = 0;
+        i < paperCount;
+        i++
+    ) {
+
+        const paper =
+            document.createElement(
+                "span"
+            );
+
+
+        paper.className =
+            "paper-piece";
+
+
+        /*
+           RANDOM POSITION
+        */
+
+        paper.style.left =
+            Math.random() * 100 +
+            "%";
+
+
+        /*
+           RANDOM SIZE
+        */
+
+        paper.style.width =
+            (
+                5 +
+                Math.random() * 8
+            ) +
+            "px";
+
+
+        paper.style.height =
+            (
+                8 +
+                Math.random() * 13
+            ) +
+            "px";
+
+
+        /*
+           RANDOM COLOR
+        */
+
+        paper.style.background =
+            colors[
+                Math.floor(
+                    Math.random() *
+                    colors.length
+                )
+            ];
+
+
+        /*
+           RANDOM MOVEMENT
+        */
+
+        paper.style.setProperty(
+            "--drift",
+            (
+                -180 +
+                Math.random() * 360
+            ) +
+            "px"
+        );
+
+
+        /*
+           RANDOM ROTATION
+        */
+
+        paper.style.setProperty(
+            "--rotation",
+            (
+                -360 +
+                Math.random() * 720
+            ) +
+            "deg"
+        );
+
+
+        /*
+           RANDOM DELAY
+        */
+
+        paper.style.animationDelay =
+            (
+                Math.random() * 0.9
+            ) +
+            "s";
+
+
+        /*
+           RANDOM SPEED
+        */
+
+        paper.style.animationDuration =
+            (
+                2 +
+                Math.random() * 1.8
+            ) +
+            "s";
+
+
+        container.appendChild(
+            paper
+        );
+
+    }
+
+
+    /* =====================================================
+       CENTER BURST
+    ===================================================== */
+
+    const burstCount = 55;
+
+
+    for (
+        let i = 0;
+        i < burstCount;
+        i++
+    ) {
+
+        const piece =
+            document.createElement(
+                "span"
+            );
+
+
+        piece.className =
+            "paper-burst-piece";
+
+
+        piece.style.background =
+            colors[
+                Math.floor(
+                    Math.random() *
+                    colors.length
+                )
+            ];
+
+
+        /*
+           RANDOM ANGLE
+        */
+
+        const angle =
+            Math.random() *
+            Math.PI *
+            2;
+
+
+        /*
+           RANDOM DISTANCE
+        */
+
+        const distance =
+            100 +
+            Math.random() * 330;
+
+
+        const bx =
+            Math.cos(angle) *
+            distance;
+
+
+        const by =
+            Math.sin(angle) *
+            distance;
+
+
+        piece.style.setProperty(
+            "--bx",
+            bx + "px"
+        );
+
+
+        piece.style.setProperty(
+            "--by",
+            by + "px"
+        );
+
+
+        piece.style.setProperty(
+            "--br",
+            (
+                -360 +
+                Math.random() * 720
+            ) +
+            "deg"
+        );
+
+
+        piece.style.animationDelay =
+            (
+                Math.random() * 0.25
+            ) +
+            "s";
+
+
+        burst.appendChild(
+            piece
+        );
+
+    }
+
+
+    /*
+       CLEAN AFTER EFFECT
+    */
+
+    setTimeout(
+        function() {
+
+            container.innerHTML = "";
+
+            burst.innerHTML = "";
+
+        },
+        5000
+    );
+
+}
+
+
+/* =========================================================
+   COUNTDOWN
+   SEPTEMBER 15, 2026
+========================================================= */
+
+function updateCountdown() {
+
+    const now =
+        new Date();
+
+
+    const target =
+        new Date(
+            "September 15, 2026 00:00:00"
+        );
+
+
+    const difference =
+        target.getTime()
+        -
+        now.getTime();
+
+
+    if (
+        difference <= 0
+    ) {
+
+        const countdown =
+            document.getElementById(
+                "countdown"
+            );
+
+
+        if (countdown) {
+
+            countdown.innerHTML =
+                '<div class="birthday-today">' +
+                '🎂 HAPPY BIRTHDAY RAGHAVAN! 🎂' +
+                '</div>';
+
+        }
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            difference /
+            (
+                1000 *
+                60 *
+                60 *
+                24
+            )
+        );
+
+
+    const hours =
+        Math.floor(
+            (
+                difference %
+                (
+                    1000 *
+                    60 *
+                    60 *
+                    24
+                )
+            ) /
+            (
+                1000 *
+                60 *
+                60
+            )
+        );
+
+
+    const minutes =
+        Math.floor(
+            (
+                difference %
+                (
+                    1000 *
+                    60 *
+                    60
+                )
+            ) /
+            (
+                1000 *
+                60
+            )
+        );
+
+
+    const seconds =
+        Math.floor(
+            (
+                difference %
+                (
+                    1000 *
+                    60
+                )
+            ) /
+            1000
+        );
+
+
+    const daysElement =
+        document.getElementById(
+            "days"
+        );
+
+    const hoursElement =
+        document.getElementById(
+            "hours"
+        );
+
+    const minutesElement =
+        document.getElementById(
+            "minutes"
+        );
+
+    const secondsElement =
+        document.getElementById(
+            "seconds"
+        );
+
+
+    if (daysElement) {
+
+        daysElement.innerText =
+            String(days)
+            .padStart(2,"0");
+
+    }
+
+
+    if (hoursElement) {
+
+        hoursElement.innerText =
+            String(hours)
+            .padStart(2,"0");
+
+    }
+
+
+    if (minutesElement) {
+
+        minutesElement.innerText =
+            String(minutes)
+            .padStart(2,"0");
+
+    }
+
+
+    if (secondsElement) {
+
+        secondsElement.innerText =
+            String(seconds)
+            .padStart(2,"0");
+
+    }
+
+}
+
+
+/* =========================================================
+   START COUNTDOWN
+========================================================= */
+
+updateCountdown();
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+/* =========================================================
+   ENTER KEY
+========================================================= */
+
+document
+    .getElementById("password")
+    .addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                checkPassword();
+
+            }
+
+        }
+    );
+
+
+</script>
+
+</body>
+
+</html>
