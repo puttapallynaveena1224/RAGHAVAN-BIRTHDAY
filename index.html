@@ -10,83 +10,49 @@
 
 <title>Happy Birthday Raghavan 💙</title>
 
+
 <style>
 
-/* =========================================================
-   RESET
-========================================================= */
+/* =================================================
+   GLOBAL
+================================================= */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 html,
 body {
+    margin: 0;
     width: 100%;
     min-height: 100%;
 }
 
 body {
+
     min-height: 100vh;
     min-height: 100dvh;
 
     font-family: Arial, sans-serif;
 
+    background:
+        linear-gradient(
+            135deg,
+            #dff6ff,
+            #bde0fe,
+            #90caf9
+        );
+
     text-align: center;
 
     overflow-x: hidden;
     overflow-y: auto;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e3f2fd,
-            #bbdefb,
-            #90caf9
-        );
 }
 
 
-/* =========================================================
-   COMMON BUTTON
-========================================================= */
-
-button {
-
-    margin-top: 15px;
-
-    padding: 12px 25px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: #1565c0;
-
-    color: white;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease;
-}
-
-button:hover {
-
-    background: #0d47a1;
-
-    transform: scale(1.05);
-}
-
-
-/* =========================================================
+/* =================================================
    LOGIN PAGE
-========================================================= */
+================================================= */
 
 .box {
 
@@ -97,7 +63,12 @@ button:hover {
 
     padding: 35px 25px;
 
-    background: white;
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #e3f2fd
+        );
 
     display: flex;
 
@@ -109,26 +80,16 @@ button:hover {
 }
 
 .cake {
-
     font-size: 70px;
-
-    margin-bottom: 10px;
 }
 
-.box h1 {
-
-    color: #1565c0;
-
-    margin-bottom: 10px;
+h1 {
+    color: #1976d2;
 }
 
-.box p {
-
+p {
     font-size: 18px;
-
-    color: #555;
-
-    margin: 8px 0;
+    color: #455a64;
 }
 
 input {
@@ -137,37 +98,57 @@ input {
 
     max-width: 350px;
 
-    padding: 13px;
+    padding: 12px;
 
-    border:
-        2px solid
-        #64b5f6;
+    border: 2px solid #64b5f6;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     font-size: 16px;
 
     outline: none;
-
-    margin-top: 10px;
 }
 
 input:focus {
+    border-color: #1976d2;
+}
 
-    border-color: #1565c0;
+button {
+
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1976d2;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    background: #0d47a1;
+
+    transform: scale(1.03);
 }
 
 #error {
-
     color: red;
-
-    min-height: 20px;
 }
 
 
-/* =========================================================
-   CINEMATIC ARROW PAGE
-========================================================= */
+/* =================================================
+   CINEMATIC PAGE
+================================================= */
 
 #cinematicPage {
 
@@ -178,25 +159,25 @@ input:focus {
     min-height: 100vh;
     min-height: 100dvh;
 
+    padding: 50px 20px;
+
     position: relative;
 
     overflow: hidden;
-
-    padding: 35px 20px;
 
     background:
 
         radial-gradient(
             circle at center,
-            rgba(255,255,255,0.45),
+            rgba(255,255,255,0.5),
             transparent 40%
         ),
 
         linear-gradient(
             135deg,
-            #64b5f6,
-            #2196f3,
-            #0d47a1
+            #1565c0,
+            #1976d2,
+            #64b5f6
         );
 }
 
@@ -206,11 +187,11 @@ input:focus {
 
     color: white;
 
-    margin-top: 25px;
+    margin-top: 30px;
 
     text-shadow:
         0 4px 10px
-        rgba(0,0,0,0.2);
+        rgba(0,0,0,0.25);
 }
 
 .cinematic-subtitle {
@@ -218,14 +199,12 @@ input:focus {
     color: white;
 
     font-size: 20px;
-
-    margin-top: 10px;
 }
 
 
-/* =========================================================
+/* =================================================
    HEART
-========================================================= */
+================================================= */
 
 .cinematic-heart {
 
@@ -233,42 +212,38 @@ input:focus {
 
     border: none;
 
+    margin-top: 30px;
+
     padding: 0;
 
-    margin-top: 25px;
-
     cursor: pointer;
-}
 
-.cinematic-heart:hover {
+    position: relative;
 
-    background: transparent;
-
-    transform: none;
+    z-index: 30;
 }
 
 .heart-shape {
 
+    font-size: 110px;
+
     display: inline-block;
-
-    font-size: 105px;
-
-    filter:
-        drop-shadow(
-            0 8px 12px
-            rgba(0,0,0,0.2)
-        );
 
     animation:
         heartbeat
         1.2s
         infinite;
+
+    filter:
+        drop-shadow(
+            0 8px 12px
+            rgba(0,0,0,0.25)
+        );
 }
 
 @keyframes heartbeat {
 
-    0%,
-    100% {
+    0% {
         transform: scale(1);
     }
 
@@ -283,67 +258,95 @@ input:focus {
     60% {
         transform: scale(1.15);
     }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.heart-hit {
+
+/* =================================================
+   HEART BREAK
+================================================= */
+
+.cinematic-heart.broken .heart-shape {
 
     animation:
-        heartHit
-        0.45s
+        heartBreak
+        0.7s
         ease
         forwards;
 }
 
-@keyframes heartHit {
+@keyframes heartBreak {
 
     0% {
-        transform: scale(1);
+
+        transform:
+            scale(1);
+
+        opacity: 1;
     }
 
     40% {
-        transform: scale(1.45);
+
+        transform:
+            scale(1.3)
+            rotate(8deg);
+
+        opacity: 1;
     }
 
     70% {
-        transform: scale(0.9);
+
+        transform:
+            scale(1.1)
+            rotate(-8deg);
+
+        opacity: 0.8;
     }
 
     100% {
-        transform: scale(1.15);
+
+        transform:
+            scale(0)
+            rotate(25deg);
+
+        opacity: 0;
     }
 }
 
 
-/* =========================================================
-   ARROW AREA
-========================================================= */
+/* =================================================
+   BOW AREA
+================================================= */
 
-.arrow-area {
+.bow-area {
 
     position: relative;
 
-    width: 340px;
+    width: 300px;
 
-    height: 230px;
+    height: 190px;
 
-    margin: 5px auto 0;
+    margin: 20px auto;
+
+    z-index: 10;
 }
 
 .bow {
 
     position: absolute;
 
-    left: 15px;
+    left: 50px;
 
-    bottom: 30px;
+    top: 25px;
 
-    width: 125px;
+    width: 150px;
 
-    height: 145px;
+    height: 150px;
 
-    border:
-        7px solid
-        #654321;
+    border: 8px solid #6d4c41;
 
     border-left: none;
 
@@ -352,6 +355,8 @@ input:focus {
 
     transform:
         rotate(-10deg);
+
+    z-index: 5;
 }
 
 .bow-string {
@@ -362,36 +367,38 @@ input:focus {
 
     top: 0;
 
-    width: 4px;
+    width: 5px;
 
-    height: 145px;
+    height: 150px;
 
     background: white;
 }
 
 
-/* =========================================================
-   CURVED SVG ARROW
-========================================================= */
+/* =================================================
+   CORRECTED CURVED SVG ARROW
+================================================= */
 
 .arrow-svg {
 
     position: absolute;
 
-    inset: 0;
+    left: 0;
 
-    width: 100%;
+    top: 0;
 
-    height: 100%;
+    width: 300px;
+
+    height: 190px;
 
     overflow: visible;
 
-    z-index: 20;
+    cursor: pointer;
 
-    pointer-events: auto;
+    z-index: 20;
 }
 
-#curvePath {
+#arrowPath {
 
     fill: none;
 
@@ -400,16 +407,9 @@ input:focus {
     stroke-width: 2;
 }
 
-.arrow-group {
-
-    transform-origin: 0 0;
-
-    pointer-events: none;
-}
-
 #arrowLine {
 
-    stroke: #654321;
+    stroke: #4e342e;
 
     stroke-width: 5;
 
@@ -418,13 +418,13 @@ input:focus {
 
 #arrowHead {
 
-    fill: #654321;
+    fill: #4e342e;
 }
 
 
-/* =========================================================
+/* =================================================
    SPARKLES
-========================================================= */
+================================================= */
 
 .sparkle {
 
@@ -435,8 +435,10 @@ input:focus {
     animation:
         sparkleFloat
         3s
-        ease-in-out
-        infinite;
+        infinite
+        ease-in-out;
+
+    pointer-events: none;
 }
 
 .sparkle.one {
@@ -487,56 +489,57 @@ input:focus {
     }
 }
 
+
+/* =================================================
+   CINEMATIC HINT
+================================================= */
+
 .cinematic-hint {
 
     color: white;
 
     font-size: 16px;
 
-    margin-top: -5px;
+    margin-top: 0;
 }
 
 
-/* =========================================================
+/* =================================================
    ENTER BUTTON
-========================================================= */
+================================================= */
 
 .enter-button {
 
     background: white;
 
-    color: #1565c0;
+    color: #1976d2;
 
     font-weight: bold;
 
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 .enter-button:hover {
 
     background: #e3f2fd;
-
-    color: #0d47a1;
 }
 
 
-/* =========================================================
+/* =================================================
    SURPRISE
-========================================================= */
+================================================= */
 
 #surprise {
 
     display: none;
 
     width: 100%;
-
-    min-height: 100vh;
 }
 
 
-/* =========================================================
-   ALL PAGES
-========================================================= */
+/* =================================================
+   COMMON PAGES
+================================================= */
 
 .page {
 
@@ -545,11 +548,19 @@ input:focus {
     width: 100%;
 
     min-height: 100vh;
+
     min-height: 100dvh;
 
     padding: 35px 25px;
 
-    background: white;
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #e3f2fd,
+            #bbdefb
+        );
 
     animation:
         pageFade
@@ -581,458 +592,22 @@ input:focus {
     }
 }
 
-
-/* =========================================================
-   PAGE 1 - HAPPY BIRTHDAY ANIMATION
-========================================================= */
-
-.animation-page {
-
-    min-height: 100vh;
-    min-height: 100dvh;
-
-    display: none;
-
-    justify-content: center;
-
-    align-items: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background:
-
-        radial-gradient(
-            circle at center,
-            #90caf9 0%,
-            #42a5f5 35%,
-            #1565c0 70%,
-            #0d47a1 100%
-        );
-}
-
-.animation-page.active {
-
-    display: flex;
-}
-
-.animation-glow {
-
-    position: absolute;
-
-    width: 500px;
-
-    height: 500px;
-
-    border-radius: 50%;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(255,255,255,0.4),
-            transparent 70%
-        );
-
-    filter: blur(20px);
-
-    animation:
-        glowAnimation
-        4s
-        ease-in-out
-        infinite
-        alternate;
-}
-
-@keyframes glowAnimation {
-
-    from {
-
-        transform:
-            scale(0.8);
-
-        opacity: 0.5;
-    }
-
-    to {
-
-        transform:
-            scale(1.15);
-
-        opacity: 0.9;
-    }
-}
-
-.birthday-animation-content {
-
-    position: relative;
-
-    z-index: 5;
-
-    color: white;
-
-    text-align: center;
-
-    animation:
-        birthdayAppear
-        1.8s
-        cubic-bezier(.17,.67,.25,1.3);
-}
-
-@keyframes birthdayAppear {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            scale(0.5)
-            translateY(40px);
-    }
-
-    70% {
-
-        opacity: 1;
-
-        transform:
-            scale(1.08)
-            translateY(0);
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            scale(1)
-            translateY(0);
-    }
-}
-
-.animation-title {
-
-    font-size:
-        clamp(
-            50px,
-            10vw,
-            120px
-        );
-
-    font-weight: 900;
-
-    line-height: 0.95;
-
-    text-shadow:
-        0 5px 20px
-        rgba(0,0,0,0.25);
-}
-
-.animation-name {
-
-    margin-top: 25px;
-
-    font-family:
-        "Brush Script MT",
-        "Segoe Script",
-        cursive;
-
-    font-size:
-        clamp(
-            45px,
-            8vw,
-            85px
-        );
-
-    animation:
-        nameAppear
-        1.2s
-        ease
-        0.8s
-        both;
-}
-
-@keyframes nameAppear {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(30px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-.animation-heart {
-
-    display: inline-block;
-
-    margin-left: 8px;
-
-    animation:
-        heartbeat
-        1.4s
-        infinite;
-}
-
-
-/* =========================================================
-   PAPER CUT EFFECT
-========================================================= */
-
-.paper-container {
-
-    position: fixed;
-
-    inset: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    overflow: hidden;
-
-    pointer-events: none;
-
-    z-index: 9999;
-}
-
-.paper-piece {
-
-    position: absolute;
-
-    top: -30px;
-
-    width: 9px;
-
-    height: 14px;
-
-    opacity: 0;
-
-    border-radius: 2px;
-
-    animation:
-        paperFall
-        2.5s
-        linear
-        forwards;
-}
-
-@keyframes paperFall {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translate3d(
-                0,
-                -40px,
-                0
-            )
-            rotate(0deg)
-            scale(0.7);
-    }
-
-    10% {
-
-        opacity: 1;
-    }
-
-    50% {
-
-        opacity: 1;
-
-        transform:
-            translate3d(
-                var(--drift),
-                50vh,
-                0
-            )
-            rotate(var(--rotation))
-            scale(1);
-    }
-
-    100% {
-
-        opacity: 0;
-
-        transform:
-            translate3d(
-                calc(var(--drift) * -0.5),
-                115vh,
-                0
-            )
-            rotate(
-                calc(var(--rotation) * 2)
-            )
-            scale(0.8);
-    }
-}
-
-
-/* =========================================================
-   PAPER BURST
-========================================================= */
-
-.paper-burst {
-
-    position: fixed;
-
-    left: 50%;
-
-    top: 45%;
-
-    width: 0;
-
-    height: 0;
-
-    pointer-events: none;
-
-    z-index: 10000;
-}
-
-.paper-burst-piece {
-
-    position: absolute;
-
-    left: 0;
-
-    top: 0;
-
-    width: 9px;
-
-    height: 15px;
-
-    border-radius: 2px;
-
-    opacity: 0;
-
-    animation:
-        paperBurst
-        1.5s
-        ease-out
-        forwards;
-}
-
-@keyframes paperBurst {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translate(0,0)
-            rotate(0deg)
-            scale(0.3);
-    }
-
-    15% {
-
-        opacity: 1;
-    }
-
-    100% {
-
-        opacity: 0;
-
-        transform:
-            translate(
-                var(--bx),
-                var(--by)
-            )
-            rotate(var(--br))
-            scale(1);
-    }
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.navigation {
-
-    margin-top: 25px;
-
-    text-align: center;
-
-    position: relative;
-
-    z-index: 50;
-}
-
-.navigation button {
-
-    margin: 5px;
-}
-
-.page-indicator {
-
-    margin-top: 15px;
-
-    text-align: center;
-
-    position: relative;
-
-    z-index: 50;
-}
-
-.dot {
-
-    display: inline-block;
-
-    width: 8px;
-
-    height: 8px;
-
-    margin: 0 4px;
-
-    background: #ccc;
-
-    border-radius: 50%;
-
-    transition:
-        all 0.3s ease;
-}
-
-.active-dot {
-
-    width: 22px;
-
-    border-radius: 10px;
-
-    background: #1565c0;
-}
-
-
-/* =========================================================
-   MESSAGE
-========================================================= */
-
 .message {
 
     line-height: 1.7;
 
-    color: #444;
+    color: #455a64;
+}
 
-    max-width: 700px;
+.page button {
 
-    margin: 15px auto;
+    margin: 10px 5px;
 }
 
 
-/* =========================================================
-   PHOTO
-========================================================= */
+/* =================================================
+   BIRTHDAY PHOTO
+================================================= */
 
 .birthday-photo {
 
@@ -1054,9 +629,9 @@ input:focus {
 }
 
 
-/* =========================================================
+/* =================================================
    GALLERY
-========================================================= */
+================================================= */
 
 .gallery-title {
 
@@ -1068,7 +643,7 @@ input:focus {
 
     color: #1565c0;
 
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .gallery {
@@ -1076,14 +651,17 @@ input:focus {
     display: grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        repeat(2, 1fr);
 
     gap: 15px;
 
+    margin-top: 15px;
+
     max-width: 700px;
 
-    margin:
-        15px auto;
+    margin-left: auto;
+
+    margin-right: auto;
 }
 
 .gallery img {
@@ -1113,9 +691,9 @@ input:focus {
 }
 
 
-/* =========================================================
+/* =================================================
    VIDEO
-========================================================= */
+================================================= */
 
 .birthday-video {
 
@@ -1133,9 +711,9 @@ input:focus {
 }
 
 
-/* =========================================================
-   LEVEL 19
-========================================================= */
+/* =================================================
+   PAGE 5 : LEVEL 19
+================================================= */
 
 .level-page {
 
@@ -1145,7 +723,7 @@ input:focus {
             135deg,
             #e3f2fd,
             #bbdefb,
-            #ffffff
+            #90caf9
         );
 }
 
@@ -1157,65 +735,84 @@ input:focus {
 
     margin-top: 10px;
 
-    border-radius: 20px;
+    border-radius: 30px;
 
-    background: #1565c0;
+    background:
+        linear-gradient(
+            135deg,
+            #1565c0,
+            #1976d2
+        );
 
     color: white;
 
     font-weight: bold;
 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(21,101,192,0.25);
 }
 
 .level-title {
 
-    color: #0d47a1;
+    color: #1565c0;
 
     font-size: 34px;
 
-    margin: 20px 0 5px;
+    margin-bottom: 5px;
 }
 
 .level-number {
 
-    font-size: 100px;
+    font-size: 110px;
 
     font-weight: bold;
 
-    color: #1565c0;
+    color: #0d47a1;
+
+    margin: 5px 0;
 
     text-shadow:
         0 5px 15px
-        rgba(21,101,192,0.2);
-
-    margin: 5px 0;
+        rgba(13,71,161,0.2);
 }
 
 .level-subtitle {
 
-    color: #455a64;
+    font-size: 22px;
 
-    font-size: 21px;
+    color: #455a64;
 }
 
 .chapter-line {
 
-    color: #546e7a;
+    color: #1976d2;
 
-    font-size: 16px;
+    font-weight: bold;
 }
 
 
-/* =========================================================
-   PROGRESS
-========================================================= */
+/* =================================================
+   LEVEL PROGRESS
+================================================= */
 
 .level-progress-container {
 
-    max-width: 650px;
+    max-width: 600px;
 
     margin: 25px auto;
+
+    padding: 20px;
+
+    background: rgba(255,255,255,0.8);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.1);
 }
 
 .progress-label {
@@ -1224,11 +821,11 @@ input:focus {
 
     justify-content: space-between;
 
-    color: #1565c0;
-
     font-weight: bold;
 
-    margin-bottom: 8px;
+    color: #1565c0;
+
+    margin-bottom: 10px;
 }
 
 .progress-bar {
@@ -1237,7 +834,7 @@ input:focus {
 
     height: 15px;
 
-    background: #dbeafe;
+    background: #d7e9f7;
 
     border-radius: 20px;
 
@@ -1251,20 +848,35 @@ input:focus {
     height: 100%;
 
     background:
-
         linear-gradient(
             90deg,
-            #64b5f6,
-            #1565c0
+            #1565c0,
+            #42a5f5
         );
 
     border-radius: 20px;
+
+    animation:
+        progressLoad
+        1.5s
+        ease;
+}
+
+@keyframes progressLoad {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 19%;
+    }
 }
 
 
-/* =========================================================
+/* =================================================
    ACHIEVEMENTS
-========================================================= */
+================================================= */
 
 .achievement-container {
 
@@ -1278,35 +890,24 @@ input:focus {
 
     max-width: 800px;
 
-    margin: 20px auto;
+    margin: 25px auto;
 }
 
 .achievement {
 
-    width: 200px;
+    width: 220px;
 
     padding: 18px;
 
+    background: white;
+
     border-radius: 18px;
 
-    background: white;
+    color: #546e7a;
 
     box-shadow:
         0 5px 15px
         rgba(0,0,0,0.1);
-
-    color: #455a64;
-
-    line-height: 1.5;
-}
-
-.achievement-icon {
-
-    display: block;
-
-    font-size: 32px;
-
-    margin-bottom: 5px;
 }
 
 .achievement strong {
@@ -1315,13 +916,18 @@ input:focus {
 
     color: #1565c0;
 
-    margin-bottom: 5px;
+    margin: 8px 0;
+}
+
+.achievement-icon {
+
+    font-size: 35px;
 }
 
 
-/* =========================================================
+/* =================================================
    COUNTDOWN
-========================================================= */
+================================================= */
 
 .countdown-box {
 
@@ -1347,7 +953,7 @@ input:focus {
 
     color: #1565c0;
 
-    font-size: 21px;
+    font-size: 22px;
 
     margin-bottom: 15px;
 
@@ -1374,11 +980,10 @@ input:focus {
     border-radius: 15px;
 
     background:
-
         linear-gradient(
             135deg,
-            #42a5f5,
-            #1565c0
+            #1565c0,
+            #42a5f5
         );
 
     color: white;
@@ -1400,34 +1005,59 @@ input:focus {
 .time-label {
 
     font-size: 13px;
+
+    opacity: 0.95;
 }
+
+.birthday-today {
+
+    font-size: 28px;
+
+    color: #1565c0;
+
+    font-weight: bold;
+}
+
+
+/* =================================================
+   LEVEL MESSAGE
+================================================= */
 
 .level-message {
 
     max-width: 650px;
 
-    margin: 20px auto;
-
-    color: #455a64;
-
-    font-size: 17px;
+    margin: 25px auto;
 
     line-height: 1.7;
+
+    color: #455a64;
+}
+
+.level-message strong {
+
+    color: #1565c0;
 }
 
 .next-level {
 
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 20px;
+
+    background: #e3f2fd;
+
     color: #1565c0;
 
     font-weight: bold;
-
-    font-size: 19px;
 }
 
 
-/* =========================================================
-   PAGE 6
-========================================================= */
+/* =================================================
+   PAGE 6 : WHO IS RAGHAVAN
+================================================= */
 
 .chapter-page {
 
@@ -1573,20 +1203,9 @@ input:focus {
 }
 
 
-/* =========================================================
-   PAGE 7
-========================================================= */
-
-.final-page {
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #e3f2fd,
-            #bbdefb
-        );
-}
+/* =================================================
+   FINAL MESSAGE - PAGE 7
+================================================= */
 
 .final-message {
 
@@ -1625,8 +1244,6 @@ input:focus {
     line-height: 1.7;
 
     color: #455a64;
-
-    margin: 12px 0;
 }
 
 .final-hearts {
@@ -1638,89 +1255,185 @@ input:focus {
     letter-spacing: 5px;
 }
 
-.birthday-today {
 
-    color: #1565c0;
+/* =================================================
+   PAGE INDICATOR
+================================================= */
 
-    font-size: 25px;
+.page-indicator {
 
-    font-weight: bold;
+    margin-top: 15px;
 
-    padding: 20px;
+    text-align: center;
+}
+
+.dot {
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    margin: 0 4px;
+
+    background: #cfd8dc;
+
+    border-radius: 50%;
+
+    transition:
+        all 0.3s ease;
+}
+
+.active-dot {
+
+    width: 20px;
+
+    border-radius: 10px;
+
+    background: #1976d2;
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* =================================================
+   FALLING HEARTS
+================================================= */
 
-@media (max-width:600px) {
+.heart {
+
+    position: fixed;
+
+    top: -30px;
+
+    font-size: 25px;
+
+    animation:
+        fall
+        5s
+        linear;
+
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+@keyframes fall {
+
+    from {
+
+        transform:
+            translateY(-30px);
+    }
+
+    to {
+
+        transform:
+            translateY(100vh);
+    }
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 600px) {
 
     .cinematic-title {
+
         font-size: 30px;
     }
 
     .cinematic-subtitle {
+
         font-size: 17px;
     }
 
     .heart-shape {
-        font-size: 85px;
-    }
 
-    .arrow-area {
-        transform: scale(0.82);
-        margin-top: -5px;
-        margin-bottom: -15px;
+        font-size: 90px;
     }
 
     .gallery {
+
         grid-template-columns:
             1fr 1fr;
 
         gap: 10px;
     }
 
-    .level-number {
-        font-size: 75px;
+    .box {
+
+        padding: 25px 15px;
+    }
+
+    .bow-area {
+
+        transform:
+            scale(0.9);
+
+        transform-origin:
+            top center;
     }
 
     .level-title {
+
         font-size: 27px;
     }
 
-    .achievement {
-        width: 90%;
+    .level-number {
+
+        font-size: 75px;
+    }
+
+    .level-subtitle {
+
+        font-size: 18px;
+    }
+
+    .countdown-box {
+
+        padding: 18px 10px;
     }
 
     .time-box {
+
         min-width: 70px;
+
         padding: 12px 8px;
     }
 
     .time-number {
+
         font-size: 24px;
     }
 
+    .achievement {
+
+        width: 100%;
+
+        max-width: 300px;
+    }
+
     .chapter-title {
+
         font-size: 30px;
     }
 
     .chapter-card {
+
         padding: 22px;
+
+        border-left-width: 4px;
     }
 
     .chapter-card p {
+
         font-size: 16px;
+
+        line-height: 1.7;
     }
 
-    .animation-title {
-        font-size: 52px;
-    }
-
-    .animation-name {
-        font-size: 50px;
-    }
 }
 
 </style>
@@ -1731,11 +1444,14 @@ input:focus {
 <body>
 
 
-<!-- =========================================================
-     LOGIN
-========================================================= -->
+<!-- =================================================
+     LOGIN PAGE
+================================================= -->
 
-<div class="box" id="login">
+<div
+    class="box"
+    id="login"
+>
 
     <div class="cake">
         🎂
@@ -1764,11 +1480,12 @@ input:focus {
 </div>
 
 
-<!-- =========================================================
-     ARROW SURPRISE
-========================================================= -->
+<!-- =================================================
+     CINEMATIC PAGE
+================================================= -->
 
 <div id="cinematicPage">
+
 
     <div class="sparkle one">
         ✨
@@ -1796,25 +1513,24 @@ input:focus {
     </p>
 
 
+    <!-- HEART -->
+
     <button
         class="cinematic-heart"
         id="cinematicHeart"
         onclick="shootArrow()"
     >
 
-        <span
-            class="heart-shape"
-            id="heartShape"
-        >
+        <span class="heart-shape">
             ❤️
         </span>
 
     </button>
 
 
-    <!-- ARROW -->
+    <!-- BOW -->
 
-    <div class="arrow-area">
+    <div class="bow-area">
 
         <div class="bow">
 
@@ -1823,49 +1539,50 @@ input:focus {
         </div>
 
 
+        <!-- CORRECTED CURVED ARROW -->
+
         <svg
             class="arrow-svg"
             id="arrowSvg"
-            viewBox="0 0 340 230"
+            viewBox="0 0 300 190"
+            onclick="shootArrow()"
+            aria-label="Shoot arrow"
         >
 
+            <!--
+                Arrow starts at the bow
+                and rises high toward the heart.
+            -->
+
             <path
-                id="curvePath"
+                id="arrowPath"
                 d="
-                    M 55 175
-                    C 80 105,
-                      145 45,
-                      245 25
-                    C 270 20,
-                      285 18,
-                      300 12
+                    M 30 82
+                    Q 75 -20 155 -70
                 "
+                fill="none"
+                stroke="transparent"
+                stroke-width="2"
             ></path>
 
 
-            <g
-                class="arrow-group"
-                id="arrowGroup"
-            >
+            <line
+                id="arrowLine"
+                x1="30"
+                y1="82"
+                x2="75"
+                y2="82"
+            ></line>
 
-                <line
-                    id="arrowLine"
-                    x1="0"
-                    y1="0"
-                    x2="48"
-                    y2="0"
-                ></line>
 
-                <polygon
-                    id="arrowHead"
-                    points="
-                        48,0
-                        34,-9
-                        34,9
-                    "
-                ></polygon>
-
-            </g>
+            <polygon
+                id="arrowHead"
+                points="
+                    75,82
+                    62,75
+                    62,89
+                "
+            ></polygon>
 
         </svg>
 
@@ -1887,69 +1604,65 @@ input:focus {
 </div>
 
 
-<!-- =========================================================
-     SURPRISE
-========================================================= -->
+<!-- =================================================
+     SURPRISE PAGES
+================================================= -->
 
 <div id="surprise">
 
 
-<!-- =========================================================
-     PAGE 1
-========================================================= -->
-
-<div
-    class="page animation-page active"
-    id="page1"
->
-
-    <div class="animation-glow"></div>
-
+    <!-- =================================================
+         PAGE 2 : BIRTHDAY
+    ================================================= -->
 
     <div
-        class="paper-container"
-        id="paperContainer"
-    ></div>
+        class="page active"
+        id="page2"
+    >
 
-
-    <div
-        class="paper-burst"
-        id="paperBurst"
-    ></div>
-
-
-    <div class="birthday-animation-content">
-
-        <div class="animation-title">
-
-            Happy<br>
-            Birthday
-
+        <div class="cake">
+            🎂
         </div>
 
+        <h1>
+            Happy Birthday Raghavan! 🥳
+        </h1>
 
-        <div class="animation-name">
+        <p class="message">
 
-            Raghavan
+            Wishing you a beautiful birthday
+            filled with happiness, smiles and
+            unforgettable memories! 💙
 
-            <span class="animation-heart">
-                ♥
-            </span>
+        </p>
 
-        </div>
+        <p>
+            May all your dreams come true. ✨
+        </p>
 
+        <h2>
+            Brother from another mother 💙
+        </h2>
 
-        <div class="navigation">
+        <p>
+            🎈 🎉 🎂 🎁 💐 🎊
+        </p>
 
-            <button onclick="backToArrowSurprise()">
-                ← Back
-            </button>
+        <img
+            src="Photos/photo1.jpeg"
+            alt="Birthday Photo"
+            class="birthday-photo"
+        >
 
-            <button onclick="nextPage()">
-                Next →
-            </button>
+        <br>
 
-        </div>
+        <button onclick="previousToPage1()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
 
 
         <div class="page-indicator">
@@ -1966,621 +1679,53 @@ input:focus {
 
     </div>
 
-</div>
 
+    <!-- =================================================
+         PAGE 3 : MEMORIES
+    ================================================= -->
 
-<!-- =========================================================
-     PAGE 2
-========================================================= -->
-
-<div
-    class="page"
-    id="page2"
->
-
-    <div class="cake">
-        🎂
-    </div>
-
-    <h1>
-        Happy Birthday Raghavan! 🥳
-    </h1>
-
-    <p class="message">
-
-        Wishing you a beautiful birthday
-        filled with happiness, smiles and
-        unforgettable memories! 💙
-
-    </p>
-
-    <p>
-        May all your dreams come true. ✨
-    </p>
-
-    <h2>
-        Brother from another mother 💙
-    </h2>
-
-    <p>
-        🎈 🎉 🎂 🎁 💐 🎊
-    </p>
-
-    <img
-    src="photo1.jpeg"
-    alt="Birthday Photo"
-    style="display:block !important; width:300px !important; height:auto !important; opacity:1 !important; visibility:visible !important;"
->
-
-    <div class="navigation">
-
-        <button onclick="previousPage()">
-            ← Back
-        </button>
-
-        <button onclick="nextPage()">
-            Next →
-        </button>
-
-    </div>
-
-
-    <div class="page-indicator">
-
-        <span class="dot"></span>
-        <span class="dot active-dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     PAGE 3
-========================================================= -->
-
-<div
-    class="page"
-    id="page3"
->
-
-    <h2 class="gallery-title">
-        Our Memories 💙
-    </h2>
-
-
-    <div class="gallery">
-
-        <img
-            src="photo7.jpeg"
-            alt="Memory 7"
-        >
-
-        <img
-            src="photo2.jpeg"
-            alt="Memory 2"
-        >
-
-        <img
-            src="photo3.jpeg"
-            alt="Memory 3"
-        >
-
-        <img
-            src="photo4.jpeg"
-            alt="Memory 4"
-        >
-
-        <img
-            src="photo5.jpeg"
-            alt="Memory 5"
-        >
-
-        <img
-            src="photo6.jpeg"
-            alt="Memory 6"
-        >
-
-    </div>
-
-
-    <div class="navigation">
-
-        <button onclick="previousPage()">
-            ← Back
-        </button>
-
-        <button onclick="nextPage()">
-            Next →
-        </button>
-
-    </div>
-
-
-    <div class="page-indicator">
-
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot active-dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     PAGE 4
-========================================================= -->
-
-<div
-    class="page"
-    id="page4"
->
-
-    <div class="cake">
-        🎥
-    </div>
-
-    <h2 class="gallery-title">
-        A Special Memory 💙
-    </h2>
-
-    <p>
-        A little memory just for you! 🥹💙
-    </p>
-
-
-    <video
-        class="birthday-video"
-        controls
-        preload="metadata"
+    <div
+        class="page"
+        id="page3"
     >
 
-        <source
-            src="Videos/video1.mp4"
-            type="video/mp4"
-        >
-
-        Your browser does not support
-        the video tag.
-
-    </video>
-
-
-    <div class="navigation">
-
-        <button onclick="previousPage()">
-            ← Back
-        </button>
-
-        <button onclick="nextPage()">
-            Next →
-        </button>
-
-    </div>
-
-
-    <div class="page-indicator">
-
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot active-dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     PAGE 5
-========================================================= -->
-
-<div
-    class="page level-page"
-    id="page5"
->
-
-    <div class="cake">
-        🎮
-    </div>
-
-    <div class="level-badge">
-        LEVEL 19 UNLOCKED
-    </div>
-
-    <h1 class="level-title">
-        A New Chapter Begins 💙
-    </h1>
-
-    <div class="level-number">
-        19
-    </div>
-
-    <p class="level-subtitle">
-        A brand new level of life begins ✨
-    </p>
-
-    <p class="chapter-line">
-        19 years • countless memories • endless possibilities 💫
-    </p>
-
-
-    <div class="level-progress-container">
-
-        <div class="progress-label">
-
-            <span>
-                Life Progress
-            </span>
-
-            <span>
-                LEVEL 19
-            </span>
-
-        </div>
-
-
-        <div class="progress-bar">
-
-            <div class="progress-fill"></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="achievement-container">
-
-        <div class="achievement">
-
-            <span class="achievement-icon">
-                🏆
-            </span>
-
-            <strong>
-                19 Years
-            </strong>
-
-            Memories unlocked
-
-        </div>
-
-
-        <div class="achievement">
-
-            <span class="achievement-icon">
-                💙
-            </span>
-
-            <strong>
-                Countless Memories
-            </strong>
-
-            Moments to remember
-
-        </div>
-
-
-        <div class="achievement">
-
-            <span class="achievement-icon">
-                ✨
-            </span>
-
-            <strong>
-                Infinite Possibilities
-            </strong>
-
-            Future waiting
-
-        </div>
-
-    </div>
-
-
-    <div class="countdown-box">
-
-        <div class="countdown-title">
-            🎂 COUNTING DOWN TO SEPTEMBER 15 🎂
-        </div>
-
-
-        <div
-            class="countdown"
-            id="countdown"
-        >
-
-            <div class="time-box">
-
-                <span
-                    class="time-number"
-                    id="days"
-                >
-                    00
-                </span>
-
-                <span class="time-label">
-                    DAYS
-                </span>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <span
-                    class="time-number"
-                    id="hours"
-                >
-                    00
-                </span>
-
-                <span class="time-label">
-                    HOURS
-                </span>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <span
-                    class="time-number"
-                    id="minutes"
-                >
-                    00
-                </span>
-
-                <span class="time-label">
-                    MINUTES
-                </span>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <span
-                    class="time-number"
-                    id="seconds"
-                >
-                    00
-                </span>
-
-                <span class="time-label">
-                    SECONDS
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <p class="level-message">
-
-        May Level 19 bring you
-        <strong>more happiness</strong>,
-        more adventures,
-        more success and
-        beautiful memories. 💙
-
-        <br><br>
-
-        Your next chapter is waiting...
-
-        <strong>
-            Make it unforgettable! ✨
-        </strong>
-
-    </p>
-
-
-    <div class="next-level">
-        🎮 READY FOR THE NEXT LEVEL? 🎮
-    </div>
-
-
-    <div class="navigation">
-
-        <button onclick="previousPage()">
-            ← Back
-        </button>
-
-        <button onclick="nextPage()">
-            Next →
-        </button>
-
-    </div>
-
-
-    <div class="page-indicator">
-
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot active-dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     PAGE 6
-========================================================= -->
-
-<div
-    class="page chapter-page"
-    id="page6"
->
-
-    <div class="chapter-label">
-        CHAPTER 06
-    </div>
-
-
-    <h1 class="chapter-title">
-        Who Is Raghavan? 💙
-    </h1>
-
-
-    <p class="chapter-subtitle">
-        A chapter written about someone truly special...
-    </p>
-
-
-    <div class="chapter-card">
-
-        <div class="chapter-number">
-            THE PERSON BEHIND THE NAME
-        </div>
-
-
-        <h2>
-            Raghavan — More Than Just a Friend
+        <h2 class="gallery-title">
+            Our Memories 💙
         </h2>
 
+        <div class="gallery">
 
-        <p>
+            <img
+                src="Photos/photo7.jpeg"
+                alt="Memory 7"
+            >
 
-            Raghavan ni describe cheyyalante
-            simple ga "friend" ani cheppadam
-            chala takkuva anipisthundi.
+            <img
+                src="Photos/photo2.jpeg"
+                alt="Memory 2"
+            >
 
-            Endukante nuvvu na life lo oka
-            different kind of person.
+            <img
+                src="Photos/photo3.jpeg"
+                alt="Memory 3"
+            >
 
-        </p>
+            <img
+                src="Photos/photo4.jpeg"
+                alt="Memory 4"
+            >
 
+            <img
+                src="Photos/photo5.jpeg"
+                alt="Memory 5"
+            >
 
-        <p>
-
-            Nuvvu
-            <span class="highlight">
-                chala manchivadivi
-            </span>.
-
-            Helping nature ante neelo
-            naturally untundi.
-
-            Evarikaina help kavali ante
-            possible ayinantha varaku
-            help cheyyadaniki mundhuku vasthav.
-
-        </p>
-
-
-        <p>
-
-            Inka nee knowledge gurinchi
-            cheppali ante...
-
-            <span class="highlight">
-                Topper + masthu knowledge
-            </span>.
-
-            Edaina topic gurinchi matladithe
-            konchem aina kothaga nerchukune
-            chance untundi.
-
-        </p>
-
-
-        <p>
-
-            But annitikante naku nachhedi
-            nee character.
-
-            Especially girls patla nuvvu
-            chupinche
-            <span class="highlight">
-                respect
-            </span>
-            chala genuine ga untundi.
-
-        </p>
-
-
-        <p>
-
-            Nee way of talking kuda chala
-            different.
-
-            Comfortable ga, respectful ga
-            matladathav.
-
-            And somehow conversations
-            always feel easy.
-
-        </p>
-
-
-        <p>
-
-            But annitikante special thing
-            enti ante...
-
-            <span class="highlight">
-                Nannu sister la treat chesthav.
-            </span>
-
-        </p>
-
-
-        <p>
-
-            Adi naaku chala valuable.
-
-            Because not every friendship
-            needs a label.
-
-            Konni relationships ki
-            oka genuine respect,
-            understanding and trust
-            unte chaalu.
-
-        </p>
-
-
-        <div class="chapter-quote">
-
-            "Some people enter our lives
-            as friends and slowly become
-            a beautiful part of our story." 💙
+            <img
+                src="Photos/photo6.jpeg"
+                alt="Memory 6"
+            >
 
         </div>
-
-
-        <p class="chapter-ending">
-
-            And Raghavan,
-            you're definitely one of those
-            people in my story. 💙
-
-        </p>
-
-    </div>
-
-
-    <div class="navigation">
 
         <button onclick="previousPage()">
             ← Back
@@ -2590,85 +1735,500 @@ input:focus {
             Next →
         </button>
 
+
+        <div class="page-indicator">
+
+            <span class="dot"></span>
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
     </div>
 
 
-    <div class="page-indicator">
+    <!-- =================================================
+         PAGE 4 : VIDEO
+    ================================================= -->
 
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot active-dot"></span>
-        <span class="dot"></span>
+    <div
+        class="page"
+        id="page4"
+    >
 
-    </div>
+        <div class="cake">
+            🎥
+        </div>
 
-</div>
-
-
-<!-- =========================================================
-     PAGE 7
-========================================================= -->
-
-<div
-    class="page final-page"
-    id="page7"
->
-
-    <div class="cake">
-        💙
-    </div>
-
-
-    <div class="final-message">
-
-        <h2>
-            Once Again,
-            Happy Birthday! 🎂💙
+        <h2 class="gallery-title">
+            A Special Memory 💙
         </h2>
 
-
         <p>
+            A little memory just for you! 🥹💙
+        </p>
 
-            Welcome to Level 19! 🎮✨
+        <video
+            class="birthday-video"
+            controls
+            preload="metadata"
+        >
+
+            <source
+                src="Videos/video1.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support
+            the video tag.
+
+        </video>
+
+        <br>
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+
+        <div class="page-indicator">
+
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         PAGE 5 : LEVEL 19
+    ================================================= -->
+
+    <div
+        class="page level-page"
+        id="page5"
+    >
+
+        <div class="cake">
+            🎮
+        </div>
+
+        <div class="level-badge">
+            LEVEL 19 UNLOCKED
+        </div>
+
+        <h1 class="level-title">
+            A New Chapter Begins 💙
+        </h1>
+
+        <div class="level-number">
+            19
+        </div>
+
+        <p class="level-subtitle">
+            A brand new level of life begins ✨
+        </p>
+
+        <p class="chapter-line">
+            19 years • countless memories • endless possibilities 💫
+        </p>
+
+
+        <!-- LIFE PROGRESS -->
+
+        <div class="level-progress-container">
+
+            <div class="progress-label">
+
+                <span>
+                    Life Progress
+                </span>
+
+                <span>
+                    LEVEL 19
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="progress-fill"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <div class="achievement-container">
+
+            <div class="achievement">
+
+                <span class="achievement-icon">
+                    🏆
+                </span>
+
+                <strong>
+                    19 Years
+                </strong>
+
+                Memories unlocked
+
+            </div>
+
+
+            <div class="achievement">
+
+                <span class="achievement-icon">
+                    💙
+                </span>
+
+                <strong>
+                    Countless Memories
+                </strong>
+
+                Moments to remember
+
+            </div>
+
+
+            <div class="achievement">
+
+                <span class="achievement-icon">
+                    ✨
+                </span>
+
+                <strong>
+                    Infinite Possibilities
+                </strong>
+
+                Future waiting
+
+            </div>
+
+        </div>
+
+
+        <!-- COUNTDOWN -->
+
+        <div class="countdown-box">
+
+            <div class="countdown-title">
+                🎂 COUNTING DOWN TO SEPTEMBER 15 🎂
+            </div>
+
+            <div
+                class="countdown"
+                id="countdown"
+            >
+
+                <div class="time-box">
+
+                    <span
+                        class="time-number"
+                        id="days"
+                    >
+                        00
+                    </span>
+
+                    <span class="time-label">
+                        DAYS
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span
+                        class="time-number"
+                        id="hours"
+                    >
+                        00
+                    </span>
+
+                    <span class="time-label">
+                        HOURS
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span
+                        class="time-number"
+                        id="minutes"
+                    >
+                        00
+                    </span>
+
+                    <span class="time-label">
+                        MINUTES
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span
+                        class="time-number"
+                        id="seconds"
+                    >
+                        00
+                    </span>
+
+                    <span class="time-label">
+                        SECONDS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <p class="level-message">
+
+            May Level 19 bring you
+            <strong>more happiness</strong>,
+            more adventures,
+            more success and
+            beautiful memories. 💙
 
             <br><br>
 
-            May this new chapter of your life
-            bring you more happiness,
-            success, adventures and
-            beautiful memories.
+            Your next chapter is waiting...
+
+            <strong>
+                Make it unforgettable! ✨
+            </strong>
 
         </p>
 
 
-        <p>
+        <div class="next-level">
+            🎮 READY FOR THE NEXT LEVEL? 🎮
+        </div>
 
-            You're not just a friend,
-            you're family. 🫂💙
-
-        </p>
-
-
-        <p>
-
-            Keep smiling.
-            Keep growing.
-            Keep achieving your dreams. ✨
-
-        </p>
+        <br>
 
 
-        <div class="final-hearts">
-            💙 💙 ❤️ 💙 💙
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+
+        <div class="page-indicator">
+
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
         </div>
 
     </div>
 
 
-    <div class="navigation">
+    <!-- =================================================
+         PAGE 6 : WHO IS RAGHAVAN?
+    ================================================= -->
+
+    <div
+        class="page chapter-page"
+        id="page6"
+    >
+
+        <div class="chapter-label">
+            THE PERSON BEHIND THE NAME
+        </div>
+
+        <h1 class="chapter-title">
+            Raghavan — More Than Just a Friend 💙
+        </h1>
+
+        <p class="chapter-subtitle">
+            A chapter written about someone truly special...
+        </p>
+
+        <div class="chapter-card">
+
+            <p>
+                Raghavan ni describe cheyyalante, simple ga <strong>“friend”</strong> ani cheppadam chala takkuva anipisthundi. Endukante, naa life lo nuvvu just oka friend ga kaadu… <strong>oka manchi brother aipoyaru, mainly maa family member aipoyaru.</strong>
+            </p>
+
+            <p>
+                <strong>26 September 2025</strong> — THANKS for calling me. Meeru naaku kakunda vere inkevariko call chesi unte, nenu mimmalni meet ayyedanni kadu… mukhyanga, oka <strong>manchi bro ni miss chesukune daanni.</strong>
+            </p>
+
+            <p>
+                Meeru <strong>chala manchivaru, Raghavan.</strong>
+            </p>
+
+            <p>
+                Inka meeru <strong>topper</strong>, full knowledge untadi. Edaina topic gurinchi meetho matladithe, conversation ayipoyaka kuda <strong>“ivala edho kothaga nerchukunna”</strong> ane feeling untundi.
+            </p>
+
+            <p>
+                Annitikante ekkuvaga naku nachhedi mee <strong>character.</strong>
+            </p>
+
+            <p>
+                Especially, girls patla meeru chupinche <strong>respect</strong> chala genuine ga anipisthundi. Respect anedi words lo cheppadam easy, kani behaviour lo chupinchadam important. Aa quality meelo chala natural ga untundi.
+            </p>
+
+            <p>
+                Kani annitikante special thing enti ante…
+            </p>
+
+            <h2 class="highlight">
+                Nannu sister la treat chestharu. 💙
+            </h2>
+
+            <p>
+                Adi naaku chala special and valuable. Nijaniki, aa adrustam andariki dorakadu anukunta. Vere vaalla life lo friend la kakunda <strong>family bond tho okarini fill cheskodam</strong> anedi vere level. So, <strong>maybe I AM LUCKY IN THAT</strong> anukunta. 💙
+            </p>
+
+            <p>
+                Konni rojulu aithe maa intlo naa kante meeke ekkuva preference vastundemo anipisthundi. 😂 Ala jarigithe <strong>I’m definitely going to be jealous of you, brohhh!</strong> 😂💙 <em>Just kidding.</em>
+            </p>
+
+            <p>
+                Kachitanga life lo meeru <strong>chala manchi position ki veltharu.</strong>
+            </p>
+
+        </div>
+
+        <div class="chapter-quote">
+            <strong>Some people enter our lives as friends…</strong>
+            <br>
+            <strong>but somewhere along the way, they become family. 💙</strong>
+            <br><br>
+            <strong>And for me, you're definitely one of those people, Raghavan. 🫶💙</strong>
+        </div>
+
+        <br>
+
+        <button onclick="previousPage()">
+            ← Back
+        </button>
+
+        <button onclick="nextPage()">
+            Next →
+        </button>
+
+        <div class="page-indicator">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         PAGE 7 : FINAL
+    ================================================= -->
+
+    <div
+        class="page"
+        id="page7"
+    >
+
+        <div class="cake">
+            💙
+        </div>
+
+
+        <div class="final-message">
+
+            <h2>
+                Once Again,
+                Happy Birthday! 🎂💙
+            </h2>
+
+
+            <p>
+
+                Welcome to Level 19! 🎮✨
+
+                <br><br>
+
+                May this new chapter of your life
+                bring you more happiness,
+                success, adventures and
+                beautiful memories.
+
+            </p>
+
+
+            <p>
+
+                You're not just a friend,
+                you're family. 🫂💙
+
+            </p>
+
+
+            <p>
+
+                Keep smiling.
+                Keep growing.
+                Keep achieving your dreams. ✨
+
+            </p>
+
+
+            <div class="final-hearts">
+                💙 💙 ❤️ 💙 💙
+            </div>
+
+        </div>
+
+
+        <div class="page-indicator">
+
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot active-dot"></span>
+            <span class="dot active-dot"></span>
+
+        </div>
+
 
         <button onclick="previousPage()">
             ← Back
@@ -2676,86 +2236,106 @@ input:focus {
 
     </div>
 
-
-    <div class="page-indicator">
-
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot active-dot"></span>
-
-    </div>
-
 </div>
 
 
-</div>
-
+<!-- =================================================
+     JAVASCRIPT
+================================================= -->
 
 <script>
 
-/* =========================================================
-   GLOBAL VARIABLES
-========================================================= */
 
-let currentPage = 1;
+/* =================================================
+   VARIABLES
+================================================= */
 
-const totalPages = 7;
+let currentPage = 2;
 
-let arrowIsMoving = false;
+let arrowClicked = false;
+
+let countdownInterval;
 
 
-/* =========================================================
+/* =================================================
    PASSWORD
-========================================================= */
+================================================= */
 
 function checkPassword() {
 
     const password =
-        document.getElementById("password").value;
+        document
+            .getElementById("password")
+            .value
+            .trim()
+            .toLowerCase();
 
-    const error =
-        document.getElementById("error");
 
-
-    if (
-        password.trim().toLowerCase() ===
-        "raghavan"
-    ) {
+    if (password === "sept 15") {
 
         document
             .getElementById("login")
             .style.display = "none";
 
+
         document
             .getElementById("cinematicPage")
             .style.display = "block";
 
-        error.innerText = "";
 
-        resetArrow();
+        createHearts();
 
     }
 
     else {
 
-        error.innerText =
-            "Wrong password 💙 Try again!";
+        document
+            .getElementById("error")
+            .innerHTML =
+            "❌ Wrong password! Try again.";
 
     }
 
 }
 
 
-/* =========================================================
+/* =================================================
+   PASSWORD ENTER KEY
+================================================= */
+
+document
+    .getElementById("password")
+    .addEventListener(
+        "keydown",
+        function(event) {
+
+            if (event.key === "Enter") {
+
+                checkPassword();
+
+            }
+
+        }
+    );
+
+
+/* =================================================
    OPEN SURPRISE
-========================================================= */
+================================================= */
 
 function openSurprise() {
 
+    if (
+        document.documentElement.requestFullscreen
+    ) {
+
+        document.documentElement
+            .requestFullscreen()
+            .catch(function() {});
+
+    }
+
+
     document
         .getElementById("cinematicPage")
         .style.display = "none";
@@ -2766,246 +2346,67 @@ function openSurprise() {
         .style.display = "block";
 
 
-    showPage(1);
+    showPage(2);
 
+    createConfetti();
 
-    startPaperEffect();
-
-}
-
-
-/* =========================================================
-   PAGE SYSTEM
-========================================================= */
-
-function showPage(pageNumber) {
-
-    if (
-        pageNumber < 1 ||
-        pageNumber > totalPages
-    ) {
-
-        return;
-
-    }
-
-
-    for (
-        let i = 1;
-        i <= totalPages;
-        i++
-    ) {
-
-        const page =
-            document.getElementById(
-                "page" + i
-            );
-
-
-        if (page) {
-
-            page.classList.remove(
-                "active"
-            );
-
-        }
-
-    }
-
-
-    const selectedPage =
-        document.getElementById(
-            "page" + pageNumber
-        );
-
-
-    if (selectedPage) {
-
-        selectedPage.classList.add(
-            "active"
-        );
-
-    }
-
-
-    currentPage =
-        pageNumber;
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    startCountdown();
 
 }
 
 
-/* =========================================================
-   NEXT
-========================================================= */
-
-function nextPage() {
-
-    if (
-        currentPage <
-        totalPages
-    ) {
-
-        showPage(
-            currentPage + 1
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   PREVIOUS
-========================================================= */
-
-function previousPage() {
-
-    if (
-        currentPage >
-        1
-    ) {
-
-        showPage(
-            currentPage - 1
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   BACK TO ARROW
-========================================================= */
-
-function backToArrowSurprise() {
-
-    document
-        .getElementById("surprise")
-        .style.display = "none";
-
-
-    document
-        .getElementById("cinematicPage")
-        .style.display = "block";
-
-
-    resetArrow();
-
-}
-
-
-/* =========================================================
-   RESET ARROW
-========================================================= */
-
-function resetArrow() {
-
-    arrowIsMoving = false;
-
-
-    const arrowGroup =
-        document.getElementById(
-            "arrowGroup"
-        );
-
-    const heart =
-        document.getElementById(
-            "heartShape"
-        );
-
-
-    if (arrowGroup) {
-
-        arrowGroup.style.display =
-            "block";
-
-        arrowGroup.setAttribute(
-            "transform",
-            "translate(0,0) rotate(0deg)"
-        );
-
-    }
-
-
-    if (heart) {
-
-        heart.classList.remove(
-            "heart-hit"
-        );
-
-    }
-
-}
-
-
-/* =========================================================
+/* =================================================
    CURVED ARROW SHOOT
-========================================================= */
+================================================= */
 
 function shootArrow() {
 
-    if (arrowIsMoving) {
-
+    if (arrowClicked) {
         return;
-
     }
 
 
-    arrowIsMoving = true;
+    arrowClicked = true;
 
 
     const path =
-        document.getElementById(
-            "curvePath"
-        );
+        document.getElementById("arrowPath");
 
-    const arrowGroup =
-        document.getElementById(
-            "arrowGroup"
-        );
+
+    const line =
+        document.getElementById("arrowLine");
+
+
+    const head =
+        document.getElementById("arrowHead");
+
 
     const heart =
-        document.getElementById(
-            "heartShape"
-        );
+        document.getElementById("cinematicHeart");
 
 
-    if (
-        !path ||
-        !arrowGroup
-    ) {
-
-        arrowIsMoving = false;
-
-        return;
-
-    }
-
-
-    const totalLength =
+    const pathLength =
         path.getTotalLength();
 
 
-    const duration =
-        1500;
+    const duration = 1400;
 
 
-    const startTime =
-        performance.now();
+    let startTime = null;
 
 
-    function animateArrow(now) {
+    function animateArrow(timestamp) {
+
+        if (!startTime) {
+
+            startTime = timestamp;
+
+        }
+
 
         let progress =
-            (now - startTime) /
-            duration;
+            (timestamp - startTime)
+            / duration;
 
 
         if (progress > 1) {
@@ -3015,49 +2416,141 @@ function shootArrow() {
         }
 
 
+        /* Smooth easing */
+
         const eased =
+            progress < 0.5
+
+            ?
+
+            2 * progress * progress
+
+            :
+
             1 -
             Math.pow(
-                1 - progress,
-                3
-            );
+                -2 * progress + 2,
+                2
+            ) / 2;
 
+
+        /* Current point */
 
         const point =
             path.getPointAtLength(
-                totalLength * eased
+                pathLength * eased
             );
 
 
-        const nextPoint =
+        /* Previous point */
+
+        const previousPoint =
             path.getPointAtLength(
-                Math.min(
-                    totalLength,
-                    totalLength * eased + 2
+                Math.max(
+                    0,
+                    pathLength * eased - 1
                 )
             );
 
 
+        /* Direction */
+
         const angle =
             Math.atan2(
-                nextPoint.y - point.y,
-                nextPoint.x - point.x
-            ) *
-            180 /
-            Math.PI;
+                point.y - previousPoint.y,
+                point.x - previousPoint.x
+            );
 
 
-        arrowGroup.setAttribute(
-            "transform",
-            "translate(" +
-            point.x +
-            "," +
-            point.y +
-            ") rotate(" +
-            angle +
-            ")"
+        const arrowLength = 45;
+
+
+        /* Arrow tail */
+
+        const tailX =
+            point.x -
+            Math.cos(angle)
+            * arrowLength;
+
+
+        const tailY =
+            point.y -
+            Math.sin(angle)
+            * arrowLength;
+
+
+        line.setAttribute(
+            "x1",
+            tailX
         );
 
+        line.setAttribute(
+            "y1",
+            tailY
+        );
+
+        line.setAttribute(
+            "x2",
+            point.x
+        );
+
+        line.setAttribute(
+            "y2",
+            point.y
+        );
+
+
+        /* Arrow head */
+
+        const headSize = 12;
+
+
+        const leftX =
+            point.x -
+            Math.cos(angle)
+            * headSize
+            -
+            Math.sin(angle)
+            * headSize;
+
+
+        const leftY =
+            point.y -
+            Math.sin(angle)
+            * headSize
+            +
+            Math.cos(angle)
+            * headSize;
+
+
+        const rightX =
+            point.x -
+            Math.cos(angle)
+            * headSize
+            +
+            Math.sin(angle)
+            * headSize;
+
+
+        const rightY =
+            point.y -
+            Math.sin(angle)
+            * headSize
+            -
+            Math.cos(angle)
+            * headSize;
+
+
+        head.setAttribute(
+            "points",
+
+            `${point.x},${point.y}
+             ${leftX},${leftY}
+             ${rightX},${rightY}`
+        );
+
+
+        /* Continue animation */
 
         if (progress < 1) {
 
@@ -3069,26 +2562,24 @@ function shootArrow() {
 
         else {
 
-            if (heart) {
+            /* Arrow hits heart */
+
+            setTimeout(function() {
 
                 heart.classList.add(
-                    "heart-hit"
+                    "broken"
                 );
 
-            }
+            }, 100);
 
 
-            setTimeout(
-                function() {
+            /* Open surprise */
 
-                    openSurprise();
+            setTimeout(function() {
 
-                    arrowIsMoving =
-                        false;
+                openSurprise();
 
-                },
-                300
-            );
+            }, 900);
 
         }
 
@@ -3102,252 +2593,296 @@ function shootArrow() {
 }
 
 
-/* =========================================================
-   PAPER CUT EFFECT
-========================================================= */
+/* =================================================
+   FALLING HEARTS
+================================================= */
 
-function startPaperEffect() {
+function createHearts() {
 
-    const container =
-        document.getElementById(
-            "paperContainer"
-        );
+    setInterval(function() {
 
-    const burst =
-        document.getElementById(
-            "paperBurst"
-        );
+        const heart =
+            document.createElement("div");
 
 
-    if (
-        !container ||
-        !burst
-    ) {
-
-        return;
-
-    }
+        heart.className =
+            "heart";
 
 
-    container.innerHTML = "";
-
-    burst.innerHTML = "";
-
-
-    const colors = [
-
-        "#ffffff",
-        "#e3f2fd",
-        "#bbdefb",
-        "#90caf9",
-        "#64b5f6",
-        "#42a5f5"
-
-    ];
+        heart.innerHTML =
+            "💙";
 
 
-    /* =====================================================
-       FALLING PAPERS
-    ===================================================== */
+        heart.style.left =
+            Math.random() * 100 + "vw";
 
-    const paperCount = 110;
 
+        heart.style.fontSize =
+            (
+                18 +
+                Math.random() * 15
+            ) + "px";
+
+
+        document.body
+            .appendChild(heart);
+
+
+        setTimeout(function() {
+
+            heart.remove();
+
+        }, 5000);
+
+
+    }, 700);
+
+}
+
+
+/* =================================================
+   CONFETTI
+================================================= */
+
+function createConfetti() {
 
     for (
         let i = 0;
-        i < paperCount;
+        i < 40;
         i++
     ) {
 
-        const paper =
-            document.createElement(
-                "span"
-            );
+        const confetti =
+            document.createElement("div");
 
 
-        paper.className =
-            "paper-piece";
+        confetti.innerHTML =
+            "💙";
 
 
-        paper.style.left =
-            Math.random() * 100 +
-            "%";
+        confetti.style.position =
+            "fixed";
 
 
-        paper.style.width =
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+
+        confetti.style.top =
+            "-30px";
+
+
+        confetti.style.fontSize =
             (
-                5 +
-                Math.random() * 8
-            ) +
-            "px";
+                15 +
+                Math.random() * 15
+            ) + "px";
 
 
-        paper.style.height =
-            (
-                8 +
-                Math.random() * 13
-            ) +
-            "px";
+        confetti.style.zIndex =
+            "9999";
 
 
-        paper.style.background =
-            colors[
-                Math.floor(
-                    Math.random() *
-                    colors.length
-                )
-            ];
+        confetti.style.animation =
+            "fall 4s linear";
 
 
-        paper.style.setProperty(
-            "--drift",
-            (
-                -180 +
-                Math.random() * 360
-            ) +
-            "px"
+        confetti.style.pointerEvents =
+            "none";
+
+
+        document.body
+            .appendChild(confetti);
+
+
+        setTimeout(function() {
+
+            confetti.remove();
+
+        }, 4000);
+
+    }
+
+}
+
+
+/* =================================================
+   SHOW PAGE
+================================================= */
+
+function showPage(pageNumber) {
+
+    document
+        .querySelectorAll(".page")
+        .forEach(function(page) {
+
+            page.classList
+                .remove("active");
+
+        });
+
+
+    const selectedPage =
+        document.getElementById(
+            "page" + pageNumber
         );
 
 
-        paper.style.setProperty(
-            "--rotation",
-            (
-                -360 +
-                Math.random() * 720
-            ) +
-            "deg"
-        );
+    if (selectedPage) {
+
+        selectedPage
+            .classList
+            .add("active");
 
 
-        paper.style.animationDelay =
-            (
-                Math.random() * 0.9
-            ) +
-            "s";
-
-
-        paper.style.animationDuration =
-            (
-                2 +
-                Math.random() * 1.8
-            ) +
-            "s";
-
-
-        container.appendChild(
-            paper
-        );
+        currentPage =
+            pageNumber;
 
     }
 
 
-    /* =====================================================
-       CENTER BURST
-    ===================================================== */
+    window.scrollTo({
 
-    const burstCount = 55;
+        top: 0,
 
+        behavior: "smooth"
 
-    for (
-        let i = 0;
-        i < burstCount;
-        i++
-    ) {
+    });
 
-        const piece =
-            document.createElement(
-                "span"
-            );
+}
 
 
-        piece.className =
-            "paper-burst-piece";
+/* =================================================
+   NEXT PAGE
+================================================= */
 
+function nextPage() {
 
-        piece.style.background =
-            colors[
-                Math.floor(
-                    Math.random() *
-                    colors.length
-                )
-            ];
+    if (currentPage < 7) {
 
-
-        const angle =
-            Math.random() *
-            Math.PI *
-            2;
-
-
-        const distance =
-            100 +
-            Math.random() * 330;
-
-
-        const bx =
-            Math.cos(angle) *
-            distance;
-
-
-        const by =
-            Math.sin(angle) *
-            distance;
-
-
-        piece.style.setProperty(
-            "--bx",
-            bx + "px"
-        );
-
-
-        piece.style.setProperty(
-            "--by",
-            by + "px"
-        );
-
-
-        piece.style.setProperty(
-            "--br",
-            (
-                -360 +
-                Math.random() * 720
-            ) +
-            "deg"
-        );
-
-
-        piece.style.animationDelay =
-            (
-                Math.random() * 0.25
-            ) +
-            "s";
-
-
-        burst.appendChild(
-            piece
+        showPage(
+            currentPage + 1
         );
 
     }
 
+}
 
-    setTimeout(
-        function() {
 
-            container.innerHTML = "";
+/* =================================================
+   PREVIOUS PAGE
+================================================= */
 
-            burst.innerHTML = "";
+function previousPage() {
 
-        },
-        5000
+    if (currentPage > 2) {
+
+        showPage(
+            currentPage - 1
+        );
+
+    }
+
+}
+
+
+/* =================================================
+   PAGE 2 → CINEMATIC PAGE
+================================================= */
+
+function previousToPage1() {
+
+    document
+        .getElementById("surprise")
+        .style.display = "none";
+
+
+    document
+        .getElementById("cinematicPage")
+        .style.display = "block";
+
+
+    /* Reset arrow */
+
+    arrowClicked = false;
+
+
+    document
+        .getElementById("cinematicHeart")
+        .classList
+        .remove("broken");
+
+
+    /* Reset arrow */
+
+    const line =
+        document.getElementById("arrowLine");
+
+
+    const head =
+        document.getElementById("arrowHead");
+
+
+    line.setAttribute(
+        "x1",
+        "30"
+    );
+
+    line.setAttribute(
+        "y1",
+        "82"
+    );
+
+    line.setAttribute(
+        "x2",
+        "75"
+    );
+
+    line.setAttribute(
+        "y2",
+        "82"
+    );
+
+
+    head.setAttribute(
+        "points",
+        "75,82 62,75 62,89"
     );
 
 }
 
 
-/* =========================================================
+/* =================================================
    COUNTDOWN
-   SEPTEMBER 15, 2026
-========================================================= */
+   BIRTHDAY: SEPTEMBER 15, 2007
+================================================= */
+
+function startCountdown() {
+
+    if (countdownInterval) {
+
+        clearInterval(
+            countdownInterval
+        );
+
+    }
+
+
+    updateCountdown();
+
+
+    countdownInterval =
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+}
+
+
+/* =================================================
+   UPDATE COUNTDOWN
+================================================= */
 
 function updateCountdown() {
 
@@ -3355,196 +2890,118 @@ function updateCountdown() {
         new Date();
 
 
-    const target =
+    /*
+       Birthday:
+       September 15, 2007
+
+       Next birthday:
+       September 15 of current year.
+
+       If already passed,
+       use next year.
+    */
+
+    let targetYear =
+        now.getFullYear();
+
+
+    let birthday =
         new Date(
-            "September 15, 2026 00:00:00"
+            targetYear,
+            8,
+            15,
+            0,
+            0,
+            0
         );
 
 
-    const difference =
-        target.getTime()
-        -
-        now.getTime();
+    if (now >= birthday) {
 
-
-    if (
-        difference <= 0
-    ) {
-
-        const countdown =
-            document.getElementById(
-                "countdown"
+        birthday =
+            new Date(
+                targetYear + 1,
+                8,
+                15,
+                0,
+                0,
+                0
             );
 
-
-        if (countdown) {
-
-            countdown.innerHTML =
-                '<div class="birthday-today">' +
-                '🎂 HAPPY BIRTHDAY RAGHAVAN! 🎂' +
-                '</div>';
-
-        }
-
-        return;
-
     }
+
+
+    const difference =
+        birthday.getTime()
+        -
+        now.getTime();
 
 
     const days =
         Math.floor(
             difference /
-            (
-                1000 *
-                60 *
-                60 *
-                24
-            )
+            (1000 * 60 * 60 * 24)
         );
 
 
     const hours =
         Math.floor(
             (
-                difference %
-                (
-                    1000 *
-                    60 *
-                    60 *
-                    24
-                )
-            ) /
-            (
-                1000 *
-                60 *
-                60
-            )
+                difference /
+                (1000 * 60 * 60)
+            ) % 24
         );
 
 
     const minutes =
         Math.floor(
             (
-                difference %
-                (
-                    1000 *
-                    60 *
-                    60
-                )
-            ) /
-            (
-                1000 *
-                60
-            )
+                difference /
+                (1000 * 60)
+            ) % 60
         );
 
 
     const seconds =
         Math.floor(
             (
-                difference %
-                (
-                    1000 *
-                    60
-                )
-            ) /
-            1000
+                difference /
+                1000
+            ) % 60
         );
 
 
-    const daysElement =
-        document.getElementById(
-            "days"
-        );
-
-    const hoursElement =
-        document.getElementById(
-            "hours"
-        );
-
-    const minutesElement =
-        document.getElementById(
-            "minutes"
-        );
-
-    const secondsElement =
-        document.getElementById(
-            "seconds"
-        );
+    document
+        .getElementById("days")
+        .innerText =
+        String(days)
+        .padStart(2, "0");
 
 
-    if (daysElement) {
-
-        daysElement.innerText =
-            String(days)
-            .padStart(2, "0");
-
-    }
+    document
+        .getElementById("hours")
+        .innerText =
+        String(hours)
+        .padStart(2, "0");
 
 
-    if (hoursElement) {
-
-        hoursElement.innerText =
-            String(hours)
-            .padStart(2, "0");
-
-    }
+    document
+        .getElementById("minutes")
+        .innerText =
+        String(minutes)
+        .padStart(2, "0");
 
 
-    if (minutesElement) {
-
-        minutesElement.innerText =
-            String(minutes)
-            .padStart(2, "0");
-
-    }
-
-
-    if (secondsElement) {
-
-        secondsElement.innerText =
-            String(seconds)
-            .padStart(2, "0");
-
-    }
+    document
+        .getElementById("seconds")
+        .innerText =
+        String(seconds)
+        .padStart(2, "0");
 
 }
 
-
-/* =========================================================
-   START COUNTDOWN
-========================================================= */
-
-updateCountdown();
-
-setInterval(
-    updateCountdown,
-    1000
-);
-
-
-/* =========================================================
-   ENTER KEY
-========================================================= */
-
-document
-    .getElementById("password")
-    .addEventListener(
-        "keydown",
-        function(event) {
-
-            if (
-                event.key === "Enter"
-            ) {
-
-                checkPassword();
-
-            }
-
-        }
-    );
-
 </script>
+
 
 </body>
 
