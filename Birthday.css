@@ -273,3 +273,807 @@ body {
         font-size: 100px;
     }
 }
+/* =========================================================
+   PAGE 11 — FAMILY
+========================================================= */
+
+.family-page {
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(144,202,249,.20),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            135deg,
+            #061326,
+            #0b1f38 50%,
+            #020712
+        );
+
+    color: white;
+
+    overflow-y: auto;
+
+    padding-bottom: 100px;
+}
+
+
+/* FAMILY TITLE */
+
+.family-title {
+
+    text-align: center;
+
+    padding:
+        25px
+        20px
+        10px;
+}
+
+
+.family-small {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-weight: 600;
+}
+
+
+.family-title h1 {
+
+    margin:
+        5px
+        0
+        5px;
+
+    font-size: 46px;
+
+    font-family:
+        'Dancing Script',
+        cursive;
+
+    color: white;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.5);
+}
+
+
+.family-title p {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    color:
+        rgba(255,255,255,.75);
+
+    font-family:
+        'Poppins',
+        sans-serif;
+}
+
+
+/* =========================================================
+   FAMILY PHOTO
+========================================================= */
+
+.family-photo-wrap {
+
+    position: relative;
+
+    width:
+        min(1100px, 94vw);
+
+    margin:
+        20px auto;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    border:
+        2px solid
+        rgba(144,202,249,.45);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(66,165,245,.18);
+
+    background:
+        rgba(255,255,255,.06);
+}
+
+
+.family-main-photo {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 65vh;
+
+    object-fit: contain;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   CLICKABLE PEOPLE
+========================================================= */
+
+.family-person-zone {
+
+    position: absolute;
+
+    border: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+    background:
+        transparent;
+
+    cursor: pointer;
+
+    z-index: 4;
+
+    border-radius: 25px;
+
+    outline: none;
+
+    transition:
+        .25s ease;
+}
+
+
+.family-person-zone:hover {
+
+    background:
+        rgba(66,165,245,.12);
+
+    box-shadow:
+        inset 0 0 0 3px
+        rgba(144,202,249,.45),
+
+        0 0 25px
+        rgba(66,165,245,.30);
+}
+
+
+/* =========================================================
+   PERSON POSITIONS
+=========================================================
+
+   LEFT → RIGHT:
+
+   1. UNCLE
+   2. AUNTY
+   3. SRINIVASA RAGHAVAN
+   4. VIJAY RAGHAVAN
+*/
+
+
+.zone-left-bro {
+
+    left: 5%;
+
+    top: 28%;
+
+    width: 25%;
+
+    height: 70%;
+}
+
+
+.zone-aunty {
+
+    left: 27%;
+
+    top: 34%;
+
+    width: 25%;
+
+    height: 65%;
+}
+
+
+.zone-uncle {
+
+    left: 49%;
+
+    top: 20%;
+
+    width: 24%;
+
+    height: 79%;
+}
+
+
+.zone-right-bro {
+
+    left: 69%;
+
+    top: 29%;
+
+    width: 26%;
+
+    height: 70%;
+}
+
+
+/* =========================================================
+   MEMBER PANEL
+========================================================= */
+
+.family-member-panel {
+
+    width:
+        min(1100px, 94vw);
+
+    margin:
+        15px auto;
+
+    padding: 0;
+
+    border-radius: 24px;
+
+    background:
+        rgba(245,249,255,.97);
+
+    color:
+        #10233d;
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.25);
+
+    overflow: hidden;
+
+    max-height: 0;
+
+    opacity: 0;
+
+    transition:
+        max-height .55s ease,
+        opacity .4s ease;
+}
+
+
+.family-member-panel.open {
+
+    max-height: 2200px;
+
+    opacity: 1;
+}
+
+
+.family-panel-placeholder {
+
+    padding:
+        30px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color:
+        #52708f;
+}
+
+
+/* MEMBER CONTENT */
+
+.family-member-content {
+
+    padding:
+        28px;
+}
+
+
+.family-member-content h2 {
+
+    margin:
+        0 0 5px;
+
+    font-size: 35px;
+
+    font-family:
+        'Dancing Script',
+        cursive;
+
+    color:
+        #1565c0;
+}
+
+
+.family-member-relation {
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color:
+        #2196f3;
+}
+
+
+.family-member-content p {
+
+    margin:
+        0 0 25px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color:
+        #304860;
+}
+
+
+/* =========================================================
+   MEMBER PHOTOS
+========================================================= */
+.family-member-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+}
+
+.family-member-photos img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    min-height: 0 !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    border-radius: 18px;
+    background: #e8eef5;
+
+    border: 2px solid rgba(33, 150, 243, 0.25);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.family-close-btn {
+
+    float: right;
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        #e3f2fd;
+
+    color:
+        #1565c0;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.family-page .page-nav {
+
+    position: relative;
+
+    margin:
+        25px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.family-page .page-nav button {
+
+    padding:
+        12px 26px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1565c0,
+            #42a5f5
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.25);
+
+    transition:
+        transform .2s ease;
+}
+
+
+.family-page .page-nav button:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .family-title {
+
+        padding-top: 18px;
+    }
+
+
+    .family-title h1 {
+
+        font-size: 38px;
+    }
+
+
+    .family-title p {
+
+        font-size: 14px;
+    }
+
+
+    .family-photo-wrap {
+
+        width: 96vw;
+
+        border-radius: 20px;
+    }
+
+
+    .family-member-content {
+
+        padding: 20px;
+    }
+
+
+    .family-member-content h2 {
+
+        font-size: 30px;
+    }
+
+
+    .family-member-relation {
+
+        font-size: 18px;
+    }
+
+
+    .family-member-content p {
+
+        font-size: 15px;
+    }
+
+
+    .family-member-photos {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .family-member-photos img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+    }
+
+
+    .zone-left-bro {
+
+        left: 3%;
+
+        width: 27%;
+    }
+
+
+    .zone-aunty {
+
+        left: 25%;
+
+        width: 29%;
+    }
+
+
+    .zone-uncle {
+
+        left: 47%;
+
+        width: 27%;
+    }
+
+
+    .zone-right-bro {
+
+        left: 67%;
+
+        width: 30%;
+    }
+
+}/* =========================================================
+   FAMILY MEMBER - SHOW COMPLETE PHOTO
+   ========================================================= */
+
+.family-member-panel {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.family-member-photos {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    align-items: start !important;
+    overflow: visible !important;
+}
+
+.family-member-photos img,
+.family-member-full-photo {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: 100% !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    aspect-ratio: auto !important;
+
+    border-radius: 18px !important;
+
+    background: #eef3f9 !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .family-member-panel {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+    }
+
+    .family-member-photos {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        gap: 18px !important;
+    }
+
+    .family-member-photos img,
+    .family-member-full-photo {
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: none !important;
+
+        object-fit: contain !important;
+        aspect-ratio: auto !important;
+    }
+} 
+/* =========================================================
+   FINAL FIX — FAMILY MEMBER FULL ORIGINAL PHOTOS
+========================================================= */
+
+.family-member-panel {
+
+    width: min(1000px, 94vw) !important;
+
+    max-height: none !important;
+
+    height: auto !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+
+}
+
+
+/* PHOTO GRID */
+
+.family-member-photos {
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 20px !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    align-items: start !important;
+
+    overflow: visible !important;
+
+}
+
+
+/* PHOTO CARD */
+
+.family-photo-card {
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    overflow: visible !important;
+
+    background: #eef3f9;
+
+    border-radius: 18px;
+
+}
+
+
+/* ORIGINAL PHOTO — NO CROP */
+
+.family-member-photos img,
+.family-member-full-photo {
+
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    min-width: 0 !important;
+
+    min-height: 0 !important;
+
+    max-width: 100% !important;
+
+    max-height: none !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    aspect-ratio: auto !important;
+
+    border-radius: 18px !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .family-member-panel {
+
+        width: 94vw !important;
+
+        max-height: none !important;
+
+        overflow: visible !important;
+
+    }
+
+
+    .family-member-photos {
+
+        grid-template-columns: 1fr !important;
+
+        gap: 18px !important;
+
+    }
+
+
+    .family-photo-card {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+    }
+
+
+    .family-member-photos img,
+    .family-member-full-photo {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-width: 100% !important;
+
+        max-height: none !important;
+
+        object-fit: contain !important;
+
+        aspect-ratio: auto !important;
+
+    }
+
+}
