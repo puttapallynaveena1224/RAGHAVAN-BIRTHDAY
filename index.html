@@ -4150,7 +4150,7 @@ body {
         </p> 
  
         <img 
-            src="Photos/photo1.jpeg" 
+            src="photo1.jpeg" 
             alt="Birthday Photo" 
             class="birthday-photo" 
         > 
@@ -4189,32 +4189,32 @@ body {
         <div class="gallery"> 
  
             <img 
-                src="Photos/photo7.jpeg" 
+                src="photo7.jpeg" 
                 alt="Memory 7" 
             > 
  
             <img 
-                src="Photos/photo2.jpeg" 
+                src="photo2.jpeg" 
                 alt="Memory 2" 
             > 
  
             <img 
-                src="Photos/photo3.jpeg" 
+                src="photo3.jpeg" 
                 alt="Memory 3" 
             > 
  
             <img 
-                src="Photos/photo4.jpeg" 
+                src="photo4.jpeg" 
                 alt="Memory 4" 
             > 
  
             <img 
-                src="Photos/photo5.jpeg" 
+                src="photo5.jpeg" 
                 alt="Memory 5" 
             > 
  
             <img 
-                src="Photos/photo6.jpeg" 
+                src="photo6.jpeg" 
                 alt="Memory 6" 
             > 
  
@@ -4266,7 +4266,7 @@ body {
         > 
  
             <source 
-                src="Videos/video1.mp4" 
+                src="video1.mp4" 
                 type="video/mp4" 
             > 
  
@@ -5883,7 +5883,7 @@ body {
   <div class="birthday-player" id="birthdayPlayer">
     <div class="album-disc">🎵</div><h2>NINNU CHUDAGANE 💙</h2>
     <p id="musicStatus">Tap ▶ to play Ninnu Chudagane</p>
-    <audio id="birthdayAudio" preload="metadata" src="Music/Ninnu chudagane.mp3"></audio>
+    <audio id="birthdayAudio" preload="metadata" src="Ninnu chudagane.mp3"></audio>
     <input id="birthdaySongFile" type="file" accept="audio/*" style="display:none" onchange="loadBirthdaySongFile(event)">
     <button class="song-file-button" onclick="document.getElementById('birthdaySongFile').click()">🎵 Choose NINNU CHUDAGANE song</button>
     <div class="music-progress" onclick="seekBirthdayMusic(event)"><div id="musicProgressFill"></div></div>
@@ -5911,7 +5911,7 @@ body {
     <div class="family-photo-wrap">
 
         <img
-            src="Photos/Family/Family-main.jpeg"
+            src="Family-main.jpeg"
             alt="Our Family"
             class="family-main-photo"
         >
@@ -6829,8 +6829,8 @@ function surpriseNo() {
 
 /* =================================================
    PAGE 8 — MEMORY TIME MACHINE
-   Put year photos inside: Photos/TimeMachine/YEAR/
-   Example: Photos/TimeMachine/2026/photo1.jpeg
+   Put year photos in the repository root for now.
+   Example: photo1.jpeg
 ================================================= */
 let tmBirthdayYear = 2026;
 const tmStartYear = 2007;
@@ -6857,11 +6857,11 @@ const timeMachinePhotos = {
     2024: [],
     2025: [],
     2026: [
-        "Photos/TimeMachine/2026/photo8.jpeg",
-        "Photos/TimeMachine/2026/photo9.jpeg",
-        "Photos/TimeMachine/2026/photo10.jpeg",
-        "Photos/TimeMachine/2026/photo11.jpeg",
-        "Photos/TimeMachine/2026/photo13.jpeg"
+        "photo8.jpeg",
+        "photo9.jpeg",
+        "photo10.jpeg",
+        "photo11.jpeg",
+        "photo13.jpeg"
     ]
 };
 
@@ -6913,7 +6913,7 @@ function updateTMYear(scrollToPhotos = false){
             <div class="tm-empty">
                 <div>📷</div>
                 <strong>No photos added for ${tmBirthdayYear} yet.</strong>
-                <span>Add them to <b>Photos/TimeMachine/${tmBirthdayYear}/</b></span>
+                <span>Add them to <b>repository root (photo8.jpeg, photo9.jpeg, etc.)</b></span>
             </div>`;
     } else {
         photos.forEach(function(src, index){
@@ -7084,10 +7084,7 @@ const familyMembers = [
     name: "Uncle",
     relation: "The Family's Strength 💙",
     matter: "He is the pillar of the family who provides strength, guidance, and support. His presence brings confidence and stability to everyone. He is someone the family can always depend on.",
-    photos: [
-      "Photos/Family/Member1-1.jpeg",
-      "Photos/Family/Member1-2.jpeg"
-    ]
+    photos: []
   },
   {
     name: "Aunty",
@@ -7100,8 +7097,8 @@ const familyMembers = [
     relation: "The Protective Support 🫂",
     matter: "He is someone who stands beside the family through good and difficult times. His support, protection, and encouragement make the family stronger.",
     photos: [
-      "Photos/Family/Member3-1.jpeg",
-      "Photos/Family/Member3-2.jpeg"
+      "Member3-1.jpeg",
+      "Member3-2.jpeg"
     ]
   },
   {
@@ -7142,16 +7139,9 @@ function closeFamilyMember(){
    Replace names and photo paths with the real friends.
 ================================================= */
 const friendsData = [
-  {name:"Friend 1", photo:"Photos/Friends/friend1.jpeg"},
-  {name:"Friend 2", photo:"Photos/Friends/friend2.jpeg"},
-  {name:"Friend 3", photo:"Photos/Friends/friend3.jpeg"},
-  {name:"Friend 4", photo:"Photos/Friends/friend4.jpeg"},
-  {name:"Friend 5", photo:"Photos/Friends/friend5.jpeg"},
-  {name:"Friend 6", photo:"Photos/Friends/friend6.jpeg"},
-  {name:"Friend 7", photo:"Photos/Friends/friend7.jpeg"},
-  {name:"Friend 8", photo:"Photos/Friends/friend8.jpeg"},
-  {name:"Friend 9", photo:"Photos/Friends/friend9.jpeg"},
-  {name:"Friend 10", photo:"Photos/Friends/friend10.jpeg"}
+  {name:"Friend 1", photo:"Friend1.jpeg"},
+  {name:"Friend 3", photo:"Friend3.jpeg"},
+  {name:"Friend 4", photo:"Friend4.jpeg"}
 ];
 
 function buildFriendsWall(){
@@ -7174,7 +7164,7 @@ buildFriendsWall();
 
 /* =================================================
    PAGE 10 — BIRTHDAY MUSIC
-   MP3 location: Music/Ninnu chudagane.mp3
+   MP3 location: Ninnu chudagane.mp3
 ================================================= */
 
 const birthdayAudio = document.getElementById("birthdayAudio");
@@ -7330,7 +7320,7 @@ if (birthdayAudio) {
     birthdayAudio.addEventListener("error", function () {
         if (musicStatus) {
             musicStatus.textContent =
-                "⚠️ Song not loaded — check Music/Ninnu chudagane.mp3";
+                "⚠️ Song not loaded — check Ninnu chudagane.mp3";
         }
         updateMusicButton(false);
     });
