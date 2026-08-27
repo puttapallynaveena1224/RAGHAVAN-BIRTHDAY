@@ -3873,6 +3873,10 @@ body {
 .family-member-relation{font-size:17px;font-weight:700;color:#546e7a;margin-top:3px}
 .family-close{width:40px;height:40px;border-radius:50%;border:0;background:#1565c0;color:#fff;font-size:28px;cursor:pointer}
 .family-member-matter{font-size:20px!important;line-height:1.7!important;font-weight:600!important;color:#26384f!important;text-align:left;margin:18px 0!important}
+.family-member-voice{margin:22px 0 18px;padding:18px;border-radius:20px;background:linear-gradient(135deg,rgba(227,242,253,.95),rgba(144,202,249,.22));border:1px solid rgba(21,101,192,.18);box-shadow:0 10px 25px rgba(21,101,192,.10)}
+.family-voice-title{font-size:21px;font-weight:800;color:#0d47a1;margin-bottom:10px;text-align:left}
+.family-voice-video{display:block;width:100%;max-width:720px;margin:0 auto;border-radius:16px;background:#061326;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.family-voice-note{margin:9px 0 0;font-size:13px;color:#546e7a;text-align:center;font-weight:600}
 .family-member-photos{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .family-member-photos img{width:100%;height:230px;object-fit:cover;border-radius:18px;box-shadow:0 8px 25px rgba(0,0,0,.16)}
 .family-panel-placeholder{padding:20px;font-size:20px;font-weight:700;color:#607d8b}
@@ -7084,12 +7088,14 @@ const familyMembers = [
     name: "Uncle",
     relation: "The Family's Strength 💙",
     matter: "He is the pillar of the family who provides strength, guidance, and support. His presence brings confidence and stability to everyone. He is someone the family can always depend on.",
+    voice: "uncle.mp4",
     photos: []
   },
   {
     name: "Aunty",
     relation: "The Heart of the Family ❤️",
     matter: "She brings love, care, warmth, and togetherness to the family. She makes everyone feel comfortable and cared for, and her presence makes the home feel complete.",
+    voice: "aunty.mp4",
     photos: []
   },
   {
@@ -7105,6 +7111,7 @@ const familyMembers = [
     name: "Vijay Raghavan(Brohh)",
     relation: "The Happiness of the Family 😊",
     matter: "He brings fun, laughter, energy, and unforgettable memories into the family. His presence keeps the family cheerful and connected.",
+    voice: "vijayraghavan.mp4",
     photos: []
   }
 ];
@@ -7122,6 +7129,16 @@ function openFamilyMember(index){
       <button class="family-close" onclick="closeFamilyMember()" aria-label="Close">×</button>
     </div>
     <p class="family-member-matter">${person.matter}</p>
+    ${person.voice ? `
+      <div class="family-member-voice">
+        <div class="family-voice-title">🎙️ ${person.name}'s Voice Message</div>
+        <video class="family-voice-video" controls playsinline preload="metadata">
+          <source src="${person.voice}" type="video/mp4">
+          Your browser does not support this video.
+        </video>
+        <div class="family-voice-note">Tap ▶ to hear the voice message 💙</div>
+      </div>
+    ` : ""}
     <div class="family-member-photos">
       ${person.photos.map(src => `<img src="${src}" alt="${person.name}" onerror="this.style.display='none'">`).join("")}
     </div>
