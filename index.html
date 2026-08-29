@@ -3823,8 +3823,8 @@ body {
   display:block;
   width:100%;
   height:auto;
-  max-height:65vh;
-  object-fit:cover;
+  max-height:none;
+  object-fit:contain;
 }
 .family-person-zone{
   position:absolute;
@@ -3914,7 +3914,7 @@ body {
 .hanging-photo:nth-child(2n) .photo-frame{transform:rotate(3deg)}
 .hanging-photo:nth-child(3n) .photo-frame{transform:rotate(-4deg)}
 .hanging-photo:hover .photo-frame{transform:rotate(0deg) translateY(-8px) scale(1.05);box-shadow:0 18px 32px rgba(0,0,0,.42);z-index:10}
-.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-frame img{width:100%;height:100%;object-fit:contain;display:block}
 .photo-fallback{position:absolute;inset:0;display:grid;place-items:center;font-size:55px;background:#e8eef5;color:#607d8b}
 .photo-frame img:not([style*="display: none"]) + .photo-fallback{display:none}
 .photo-name{margin-top:12px;font-size:19px;font-weight:800;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
