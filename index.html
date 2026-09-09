@@ -4190,6 +4190,92 @@ body {
 }
 </style>
 
+<style id="book-of-memories-css">
+/* =========================================================
+   BOOK OF MEMORIES — PAGE 8
+========================================================= */
+#page8.book-memories-page{
+    min-height:100vh;
+    min-height:100dvh;
+    padding:24px 14px 35px;
+    color:#fff;
+    background:
+      radial-gradient(circle at 50% 20%,rgba(255,190,220,.18),transparent 24%),
+      radial-gradient(circle at 15% 80%,rgba(120,150,255,.18),transparent 28%),
+      linear-gradient(135deg,#120b20 0%,#2a1733 48%,#090712 100%);
+}
+#page8.book-memories-page::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 1px,transparent 2px);
+    background-size:170px 170px;opacity:.28;animation:bookStars 16s linear infinite;
+}
+@keyframes bookStars{to{transform:translate(-80px,55px)}}
+.book-wrap{position:relative;z-index:2;width:min(1180px,96vw);margin:auto}
+.book-heading{text-align:center;margin-bottom:18px}
+.book-icon{font-size:42px;filter:drop-shadow(0 0 14px rgba(255,190,220,.65))}
+.book-small{font-size:11px;letter-spacing:4px;color:#e8c8d8;font-weight:800;margin-top:4px}
+.book-heading h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,64px);margin:6px 0 2px;color:#fff;text-shadow:0 4px 22px rgba(0,0,0,.45)}
+.book-heading p{margin:0;color:rgba(255,255,255,.78);font-family:'Cormorant Garamond',serif;font-size:19px}
+.memory-book{position:relative;width:100%;min-height:650px;border-radius:24px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.18);background:#f3e7d5}
+.book-sheet{display:none;width:100%;min-height:650px}
+.book-sheet.active{display:flex;animation:bookPageIn .55s ease both}
+@keyframes bookPageIn{from{opacity:0;transform:translateX(22px) scale(.985)}to{opacity:1;transform:none}}
+.book-cover{background:linear-gradient(135deg,#2b1029,#6d315f 48%,#231326);align-items:center;justify-content:center;text-align:center}
+.cover-inner{width:min(720px,88%);padding:65px 30px;border:1px solid rgba(255,255,255,.25);border-radius:20px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 45px rgba(255,255,255,.04),0 20px 50px rgba(0,0,0,.25)}
+.cover-ornament{font-size:30px;color:#f5c5df;margin-bottom:12px}
+.cover-kicker,.chapter-label{font-size:11px;letter-spacing:4px;font-weight:800;color:#dcb3cb}
+.cover-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,90px);line-height:.88;margin:18px 0;color:#fff;text-shadow:0 8px 28px rgba(0,0,0,.35)}
+.cover-years{font-size:24px;letter-spacing:5px;color:#f4d7e7;margin:20px 0 12px}
+.cover-inner p{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(255,255,255,.82);margin:0 auto 30px;max-width:570px}
+.book-open-btn,.book-navigation button{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:13px 25px;font-family:inherit;font-weight:800;cursor:pointer;transition:.25s ease}
+.book-open-btn{background:linear-gradient(135deg,#f5d7e8,#c987ae);color:#291327;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.book-open-btn:hover,.book-navigation button:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.28)}
+.book-chapter{background:linear-gradient(90deg,#f7efdf 0%,#fffaf1 49.5%,#e7d9c0 50%,#fffaf1 50.5%,#f4ead8 100%);color:#3a2a22;position:relative}
+.book-chapter::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(90,60,40,.12);box-shadow:0 0 18px rgba(70,45,25,.14)}
+.book-page-left,.book-page-right{width:50%;padding:42px 42px;position:relative;z-index:1}
+.book-page-left{text-align:left}
+.book-page-right{display:flex;flex-direction:column;min-width:0}
+.book-page-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,70px);margin:10px 0 8px;color:#34231e}
+.chapter-line{width:95px;height:2px;background:#b77c9e;margin:10px 0 22px}
+.chapter-quote{font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.4;font-style:italic;color:#604a40;max-width:470px}
+.year-list{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:26px 0}
+.year-list span{padding:9px 5px;text-align:center;border:1px solid rgba(120,80,60,.18);border-radius:10px;background:rgba(255,255,255,.45);font-family:'Cormorant Garamond',serif;font-size:18px}
+.chapter-note{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.5;color:#665048;max-width:470px}
+.chapter-big-year{font-family:'Cormorant Garamond',serif;font-size:clamp(90px,13vw,160px);line-height:.9;color:#8c5378;opacity:.78;margin:35px 0}
+.single-year-left{display:flex;flex-direction:column;justify-content:center}
+.photo-grid-title{text-align:center;font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:3px;color:#5b4035;margin-bottom:15px}
+.book-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;overflow-y:auto;max-height:555px;padding:4px 7px 8px}
+.book-photo-card{background:#fff;padding:7px 7px 13px;box-shadow:0 7px 18px rgba(60,40,25,.16);border-radius:2px;transition:.25s ease;cursor:pointer}
+.book-photo-card:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 13px 28px rgba(60,40,25,.22)}
+.book-photo-card img{display:block;width:100%;height:205px;object-fit:cover;border-radius:1px}
+.book-navigation{position:relative;z-index:3;display:flex;justify-content:center;align-items:center;gap:22px;margin:18px auto 0}
+.book-navigation button{background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(8px)}
+.book-progress{min-width:60px;text-align:center;color:#f2dce9;font-weight:800}
+#bookPage1.active ~ *{}
+@media(max-width:760px){
+  .memory-book,.book-sheet{min-height:720px}
+  .book-sheet.active{display:block}
+  .book-chapter{background:linear-gradient(#f7efdf,#fffaf1)}
+  .book-chapter::after{display:none}
+  .book-page-left,.book-page-right{width:100%;padding:28px 22px}
+  .book-page-left{text-align:center}
+  .book-page-left h2{font-size:48px}
+  .chapter-line{margin:10px auto 18px}
+  .chapter-quote,.chapter-note{margin-left:auto;margin-right:auto}
+  .chapter-big-year{font-size:100px;margin:18px 0}
+  .book-photo-grid{max-height:360px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .book-photo-card img{height:145px}
+  .book-navigation{gap:10px}
+}
+@media(max-width:460px){
+  .book-heading h1{font-size:38px}
+  .cover-inner{padding:45px 18px}
+  .cover-inner h2{font-size:52px}
+  .book-photo-grid{grid-template-columns:1fr;max-height:350px}
+  .book-photo-card img{height:200px}
+  .year-list{grid-template-columns:repeat(2,1fr)}
+}
+</style>
 </head> 
  
  
@@ -4211,7 +4297,7 @@ body {
         </div> 
  
         <p class="login-eyebrow"> 
-            A Private Little Surprise 
+            A little Surprise 
         </p> 
  
         <h1 class="login-title"> 
@@ -4220,13 +4306,15 @@ body {
  
         <p class="login-subtitle"> 
  
-            Some memories are not meant 
-            to be opened by everyone... 
- 
+            Some moments become memories,
+some memories become stories.....
+
+And this little space holds
+a few stories that belong to you. 💙
             <br><br> 
  
-            Enter the secret password 
-            to continue. 
+            Enter the password 
+            to continue
  
         </p> 
  
@@ -4306,10 +4394,6 @@ body {
     <p class="cinematic-hint">
         ༺ Tap the arrow to hit the <span class="pink">heart</span> 🏹❤️ ༻
     </p>
-
-    <button class="enter-button" onclick="openSurprise()">
-        Enter Surprise 💙
-    </button>
 
 </div>
 
@@ -4674,7 +4758,7 @@ body {
         <div class="countdown-box"> 
  
             <div class="countdown-title"> 
-                🎂 COUNTING DOWN TO SEPTEMBER 15 🎂 
+                🎂 COUNTING DOWN TO SEPTEMBER 15🎂 
             </div> 
  
             <div 
@@ -6083,28 +6167,79 @@ body {
 </style>
  
 
-<!-- PAGE 8 — MEMORY TIME MACHINE -->
-<div class="page birthday-extra-page time-machine-page" id="page8">
-  <div class="extra-icon">🕰️</div>
-  <div class="extra-small">MEMORY TIME MACHINE</div>
-  <h1 class="extra-title">Travel Through Time ✨</h1>
-  <p class="extra-subtitle">Click a year and unlock the memories from that year. 💙</p>
-
-  <div class="tm-box tm-wide-box">
-    <div class="tm-screen tm-click-year" onclick="travelThroughTime()">
-      <span id="tmYear">2026</span>
-      <small>CLICK YEAR TO VIEW MEMORIES</small>
+<!-- PAGE 8 — BOOK OF MEMORIES -->
+<div class="page birthday-extra-page book-memories-page" id="page8">
+  <div class="book-wrap">
+    <div class="book-heading">
+      <div class="book-icon">📖</div>
+      <div class="book-small">A COLLECTION OF BEAUTIFUL MOMENTS</div>
+      <h1>THE BOOK OF MEMORIES</h1>
+      <p>19 years. Countless moments. One beautiful story. 💙</p>
     </div>
 
-    <div class="tm-controls">
-      <button onclick="tmPrevious()" aria-label="Previous year">◀</button>
-      <button onclick="tmNext()" aria-label="Next year">▶</button>
+    <div class="memory-book" id="memoryBook">
+      <section class="book-sheet book-cover active" id="bookCover">
+        <div class="cover-inner">
+          <div class="cover-ornament">✦</div>
+          <div class="cover-kicker">A LIFE IN MOMENTS</div>
+          <h2>THE BOOK<br>OF MEMORIES</h2>
+          <div class="cover-years">2007 — 2026</div>
+          <p>19 years of laughter, love, growth &amp; unforgettable memories.</p>
+          <button class="book-open-btn" onclick="openMemoryBook()">OPEN THE BOOK ✨</button>
+        </div>
+      </section>
+
+      <section class="book-sheet book-chapter" id="bookPage1">
+        <div class="book-page-left">
+          <div class="chapter-label">17 CHAPTERS</div>
+          <h2>2007 — 2024</h2>
+          <div class="chapter-line"></div>
+          <p class="chapter-quote">“The years passed, but every little moment became a part of the story.”</p>
+          <div class="year-list" id="years2007_2024"></div>
+          <p class="chapter-note">A collection of childhood memories, growing-up moments and everything in between. 🌱</p>
+        </div>
+        <div class="book-page-right">
+          <div class="photo-grid-title">MEMORIES</div>
+          <div class="book-photo-grid" id="bookPhotos2007_2024"></div>
+        </div>
+      </section>
+
+      <section class="book-sheet book-chapter" id="bookPage2">
+        <div class="book-page-left single-year-left">
+          <div class="chapter-label"> 18 CHAPTER </div>
+          <h2>2025</h2>
+          <div class="chapter-line"></div>
+          <p class="chapter-quote">“A year that quietly became a collection of memories worth keeping forever.”</p>
+          <div class="chapter-big-year">2025</div>
+          <p class="chapter-note">The memories are still fresh, the smiles still remain, and every moment still has a story to tell. 📸</p>
+        </div>
+        <div class="book-page-right">
+          <div class="photo-grid-title">2025 • MEMORIES</div>
+          <div class="book-photo-grid" id="bookPhotos2025"></div>
+        </div>
+      </section>
+
+      <section class="book-sheet book-chapter" id="bookPage3">
+        <div class="book-page-left single-year-left">
+          <div class="chapter-label">19 CHAPTER III</div>
+          <h2>2026</h2>
+          <div class="chapter-line"></div>
+          <p class="chapter-quote">“The present chapter is still being written — and the best moments are yet to come.”</p>
+          <div class="chapter-big-year">2026</div>
+          <p class="chapter-note">A brand-new chapter filled with today’s smiles, today’s memories and tomorrow’s stories. ✨</p>
+        </div>
+        <div class="book-page-right">
+          <div class="photo-grid-title">2026 • PRESENT</div>
+          <div class="book-photo-grid" id="bookPhotos2026"></div>
+        </div>
+      </section>
     </div>
 
-
-    <div id="tmMessage" class="extra-message">Choose a year to open its memories. 💙</div>
-
-    <div class="tm-photo-gallery" id="tmPhotoGallery"></div>
+    <div class="book-navigation" id="bookNavigation" style="display:none">
+      <button onclick="memoryBookPrevious()">← Previous</button>
+      <div class="book-progress" id="bookProgress">1 / 3</div>
+      <button onclick="memoryBookNext()">Next →</button>
+    </div>
   </div>
 
   <div class="page-nav">
@@ -6421,7 +6556,7 @@ function checkPassword() {
             .toLowerCase(); 
  
  
-    if (password === "sept 15") { 
+    if (password.replace(/\s+/g, " ") === "sept 15") { 
  
         const login = 
             document.getElementById("login"); 
@@ -7020,8 +7155,8 @@ function updateCountdown() {
             targetYear, 
             8, 
             15, 
-            0, 
-            0, 
+            23, 
+            59, 
             0 
         ); 
  
@@ -7033,8 +7168,8 @@ function updateCountdown() {
                 targetYear + 1, 
                 8, 
                 15, 
-                0, 
-                0, 
+                23, 
+                59, 
                 0 
             ); 
  
@@ -7201,160 +7336,110 @@ function surpriseNo() {
 
 
 /* =================================================
-   PAGE 8 — MEMORY TIME MACHINE
-   Put year photos in the repository root for now.
-   Example: photo1.jpeg
+   PAGE 8 — BOOK OF MEMORIES
 ================================================= */
-let tmBirthdayYear = 2026;
-const tmStartYear = 2007;
-const tmEndYear = 2026;
+const bookPhotos2007_2024 = [
+    "2007-2024-1.jpg", "2007-2024-2.jpg", "2007-2024-3.jpg",
+    "2007-2024-4.jpg", "2007-2024-5.jpg", "2007-2024-6.jpg",
+    "2007-2024-7.jpg", "2007-2024-8.jpg", "2007-2024-9.jpg",
+    "2007-2024-10.jpg", "2007-2024-11.jpg", "2007-2024-12.jpg"
+];
+const bookPhotos2025 = [
+    "2025-1.jpg", "2025-2.jpg", "2025-3.jpg", "2025-4.jpg",
+    "2025-5.jpg", "2025-6.jpg", "2025-7.jpg", "2025-8.jpg"
+];
+const bookPhotos2026 = [
+    "2026-1.jpg", "2026-2.jpg", "2026-3.jpg", "2026-4.jpg",
+    "2026-5.jpg", "2026-6.jpg", "2026-7.jpg", "2026-8.jpg"
+];
 
-const timeMachinePhotos = {
-    2007: [],
-    2008: [],
-    2009: [],
-    2010: [],
-    2011: [],
-    2012: [],
-    2013: [],
-    2014: [],
-    2015: [],
-    2016: [],
-    2017: [],
-    2018: [],
-    2019: [],
-    2020: [],
-    2021: [],
-    2022: [],
-    2023: [],
-    2024: [],
-    2025: [],
-    2026: [
-        "photo8.jpeg",
-        "photo9.jpeg",
-        "photo10.jpeg",
-        "photo11.jpeg",
-        "photo13.jpeg"
-    ]
-};
+let memoryBookPage = 0;
+const memoryBookPages = ["bookPage1", "bookPage2", "bookPage3"];
 
-const tmYearMessages = {
-    2007: "🌱 The beginning of a beautiful story...",
-    2008: "🧸 Little moments from the early years.",
-    2009: "✨ Another chapter of the journey.",
-    2010: "🌈 Growing up, one memory at a time.",
-    2011: "📸 More memories waiting to be remembered.",
-    2012: "💙 Every year added another little story.",
-    2013: "🌟 A new chapter, a new set of memories.",
-    2014: "😊 Growing, learning and making memories.",
-    2015: "🎈 Another year full of little moments.",
-    2016: "✨ The story keeps getting better.",
-    2017: "💫 More moments worth keeping forever.",
-    2018: "📖 Another chapter in the journey.",
-    2019: "💙 Memories that still make us smile.",
-    2020: "🌙 A different year, but still part of the story.",
-    2021: "📸 Moments that deserve a place in the memory box.",
-    2022: "💫 Some moments never really leave us.",
-    2023: "✨ Time changes, but special memories stay.",
-    2024: "🌸 Look back and smile at the beautiful moments.",
-    2025: "📸 A year full of memories worth keeping.",
-    2026: "🚀 Welcome to the present — a brand new chapter!"
-};
-
-/* =================================================
-   📸 DISPLAY PHOTOS
-================================================= */
-
-function updateTMYear(scrollToPhotos = false){
-    const yearElement = document.getElementById("tmYear");
-    if(yearElement) yearElement.textContent = tmBirthdayYear;
-
-    const photos = timeMachinePhotos[tmBirthdayYear] || [];
-    const gallery = document.getElementById("tmPhotoGallery");
-    const message = document.getElementById("tmMessage");
-
+function fillBookPhotos(id, photos, label){
+    const gallery = document.getElementById(id);
     if(!gallery) return;
     gallery.innerHTML = "";
-
-    if(message){
-        message.textContent = tmYearMessages[tmBirthdayYear] ||
-            ("🕰️ You travelled to " + tmBirthdayYear + "! 💙");
-    }
-
-    if(photos.length === 0){
-        gallery.innerHTML = `
-            <div class="tm-empty">
-                <div>📷</div>
-                <strong>No photos added for ${tmBirthdayYear} yet.</strong>
-                <span>Add them to <b>repository root (photo8.jpeg, photo9.jpeg, etc.)</b></span>
-            </div>`;
-    } else {
-        photos.forEach(function(src, index){
-            const bubble = document.createElement("div");
-            bubble.className = "tm-bubble bubble-" + (index + 1);
-            bubble.setAttribute("role", "button");
-            bubble.setAttribute("tabindex", "0");
-            bubble.setAttribute("aria-label", tmBirthdayYear + " Memory " + (index + 1));
-
-            const photo = document.createElement("img");
-            photo.src = src;
-            photo.alt = tmBirthdayYear + " Memory " + (index + 1);
-            photo.loading = index === 0 ? "eager" : "lazy";
-            photo.decoding = "async";
-            photo.onerror = function(){
-                bubble.remove();
-            };
-
-            function openBubblePhoto(){
-                const viewer = document.getElementById("photoViewer");
-                const viewerImage = document.getElementById("photoViewerImage");
-                if(viewer && viewerImage){
-                    viewerImage.src = src;
-                    viewerImage.alt = photo.alt;
-                    viewer.classList.add("show");
-                    viewer.setAttribute("aria-hidden", "false");
-                    document.body.style.overflow = "hidden";
-                }
+    photos.forEach(function(src, index){
+        const card = document.createElement("div");
+        card.className = "book-photo-card";
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = label + " memory " + (index + 1);
+        img.loading = index < 2 ? "eager" : "lazy";
+        img.decoding = "async";
+        img.onerror = function(){ card.remove(); };
+        img.addEventListener("click", function(){
+            const viewer = document.getElementById("photoViewer");
+            const viewerImage = document.getElementById("photoViewerImage");
+            if(viewer && viewerImage){
+                viewerImage.src = src;
+                viewerImage.alt = img.alt;
+                viewer.classList.add("show");
+                viewer.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
             }
-
-            bubble.addEventListener("click", openBubblePhoto);
-            bubble.addEventListener("keydown", function(event){
-                if(event.key === "Enter" || event.key === " "){
-                    event.preventDefault();
-                    openBubblePhoto();
-                }
-            });
-
-            bubble.appendChild(photo);
-            gallery.appendChild(bubble);
         });
-    }
+        card.appendChild(img);
+        gallery.appendChild(card);
+    });
+}
 
-    if(scrollToPhotos && gallery){
-        setTimeout(function(){
-            gallery.scrollIntoView({behavior:"smooth", block:"nearest"});
-        }, 80);
+function createBookYears(){
+    const container = document.getElementById("years2007_2024");
+    if(!container) return;
+    container.innerHTML = "";
+    for(let year = 2007; year <= 2024; year++){
+        const span = document.createElement("span");
+        span.textContent = year;
+        container.appendChild(span);
     }
 }
-function tmPrevious(){
-    if(tmBirthdayYear > tmStartYear){
-        tmBirthdayYear--;
-        updateTMYear(true);
+
+function openMemoryBook(){
+    const cover = document.getElementById("bookCover");
+    if(cover) cover.classList.add("opened");
+    memoryBookPage = 0;
+    setTimeout(function(){
+        if(cover) cover.style.display = "none";
+        memoryBookPages.forEach(function(id, index){
+            const page = document.getElementById(id);
+            if(page) page.classList.toggle("active", index === 0);
+        });
+        const nav = document.getElementById("bookNavigation");
+        if(nav) nav.style.display = "flex";
+        updateMemoryBookProgress();
+    }, 550);
+}
+
+function updateMemoryBookProgress(){
+    const progress = document.getElementById("bookProgress");
+    if(progress) progress.textContent = (memoryBookPage + 1) + " / 3";
+    memoryBookPages.forEach(function(id, index){
+        const page = document.getElementById(id);
+        if(page) page.classList.toggle("active", index === memoryBookPage);
+    });
+}
+
+function memoryBookNext(){
+    if(memoryBookPage < memoryBookPages.length - 1){
+        memoryBookPage++;
+        updateMemoryBookProgress();
     }
 }
-function tmNext(){
-    if(tmBirthdayYear < tmEndYear){
-        tmBirthdayYear++;
-        updateTMYear(true);
+
+function memoryBookPrevious(){
+    if(memoryBookPage > 0){
+        memoryBookPage--;
+        updateMemoryBookProgress();
     }
 }
-function travelThroughTime(){
-    updateTMYear(true);
-}
-/* Initialise the Time Machine without showing a year strip. */
-setTimeout(function(){
-    updateTMYear(false);
-}, 0);
+
+createBookYears();
+fillBookPhotos("bookPhotos2007_2024", bookPhotos2007_2024, "2007–2024");
+fillBookPhotos("bookPhotos2025", bookPhotos2025, "2025");
+fillBookPhotos("bookPhotos2026", bookPhotos2026, "2026");
+
 /* =================================================
    PAGE 9 — STARS
    SVG lines are calculated from the actual star positions,
@@ -7416,8 +7501,7 @@ function connectBirthdayStar(n){
         document.querySelectorAll(".constellation-star")
             .forEach(function(s){ s.classList.add("active"); });
         message.innerHTML =
-            "🌟✨ Star formation complete! ✨🌟<br>" +
-            "You are the brightest star in this birthday story. 💙";
+            "🌟✨ The sky may be filled with countless stars, but there will always be one that shines a little brighter — YOU. ✨🌟<br><br>";
         if(board){
             board.classList.add("star-formation-complete");
         }
@@ -8471,5 +8555,14 @@ if (birthdayAudio) {
 })();
 </script>
 
+<script>
+document.addEventListener("keydown", function(event){
+  if(!document.getElementById("page8")?.classList.contains("active")) return;
+  const nav=document.getElementById("bookNavigation");
+  if(!nav || nav.style.display === "none") return;
+  if(event.key === "ArrowRight") memoryBookNext();
+  if(event.key === "ArrowLeft") memoryBookPrevious();
+});
+</script>
 </body> 
 </html>
