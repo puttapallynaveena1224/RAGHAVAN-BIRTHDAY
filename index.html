@@ -4330,6 +4330,193 @@ body {
 }
 </style>
 
+
+<style id="final-complete-photo-mobile-fix">
+/* ===== FAMILY + FRIENDS + MEMORIES: SHOW THE WHOLE PHOTO ===== */
+.family-main-photo,
+.family-member-photos img,
+.photo-frame img,
+.book-photo-card img {
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  display:block !important;
+}
+
+.family-member-photos {
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  align-items:start !important;
+}
+
+.photo-frame {
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  overflow:hidden !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.book-photo-grid {
+  height:auto !important;
+  max-height:none !important;
+  overflow:visible !important;
+  align-items:start !important;
+}
+
+.book-photo-card {
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  overflow:hidden !important;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:700px) {
+  .family-member-photos {
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  .family-member-photos img,
+  .photo-frame img,
+  .book-photo-card img {
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+  }
+
+  .photo-frame {
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    padding:6px !important;
+  }
+
+  .book-photo-grid {
+    grid-template-columns:1fr !important;
+    height:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
+    gap:18px !important;
+    padding:6px !important;
+  }
+
+  .book-photo-card {
+    height:auto !important;
+    min-height:0 !important;
+  }
+}
+
+/* ===== MOBILE ARROW + HEART PAGE ===== */
+@media (max-width:700px) {
+  #cinematicPage {
+    min-height:100dvh !important;
+    height:100dvh !important;
+    padding:10px 6px !important;
+  }
+
+  .cinematic-title {
+    font-size:34px !important;
+    line-height:1 !important;
+    margin:4px auto 3px !important;
+    width:98% !important;
+  }
+
+  .arrow-divider {
+    width:84% !important;
+    font-size:22px !important;
+  }
+
+  .cinematic-subtitle {
+    font-size:18px !important;
+    line-height:1.1 !important;
+  }
+
+  .cinematic-heart {
+    left:66% !important;
+    top:40% !important;
+  }
+
+  .heart-shape {
+    font-size:78px !important;
+  }
+
+  .cinematic-heart::before {
+    width:145px !important;
+    height:145px !important;
+  }
+
+  .bow-area {
+    left:-24px !important;
+    bottom:105px !important;
+    width:230px !important;
+    height:250px !important;
+    transform:none !important;
+  }
+
+  .sagittarius-bow {
+    width:230px !important;
+    height:250px !important;
+    transform:none !important;
+  }
+
+  .bow-string-overlay {
+    width:230px !important;
+    height:250px !important;
+    transform:translate(-50%,-50%) !important;
+  }
+
+  .arrow-svg {
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+  }
+
+  .cinematic-hint {
+    bottom:73px !important;
+    width:94% !important;
+    font-size:16px !important;
+    line-height:1.1 !important;
+  }
+
+  .enter-button {
+    bottom:8px !important;
+    width:88vw !important;
+    min-width:0 !important;
+    min-height:48px !important;
+    padding:8px 16px !important;
+    font-size:20px !important;
+  }
+}
+
+@media (max-width:390px) {
+  .cinematic-title {font-size:29px !important;}
+  .cinematic-subtitle {font-size:16px !important;}
+  .cinematic-heart {left:67% !important;top:39% !important;}
+  .heart-shape {font-size:68px !important;}
+  .cinematic-heart::before {width:125px !important;height:125px !important;}
+  .bow-area {left:-30px !important;bottom:100px !important;width:205px !important;height:225px !important;}
+  .sagittarius-bow {width:205px !important;height:225px !important;}
+  .bow-string-overlay {width:205px !important;height:225px !important;}
+  .cinematic-hint {bottom:69px !important;font-size:14px !important;}
+  .enter-button {width:90vw !important;font-size:18px !important;}
+}
+</style>
+
 </head> 
  
  
