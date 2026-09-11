@@ -4618,6 +4618,50 @@ body {
   .family-member-photos img{padding:2px !important;border-radius:10px !important;}
 }
 </style>
+
+<style id="password-eye-final-fix">
+.password-wrap{position:relative !important;width:100% !important;}
+#password{padding-left:20px !important;padding-right:62px !important;}
+.password-toggle{
+    position:absolute !important;
+    right:10px !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    width:44px !important;
+    height:44px !important;
+    border:0 !important;
+    border-radius:12px !important;
+    background:rgba(255,255,255,.08) !important;
+    color:#fff !important;
+    font-size:22px !important;
+    display:grid !important;
+    place-items:center !important;
+    cursor:pointer !important;
+    z-index:5 !important;
+    transition:.2s ease !important;
+}
+.password-toggle:hover,.password-toggle:active{
+    background:rgba(144,202,249,.20) !important;
+    transform:translateY(-50%) scale(1.05) !important;
+}
+@media(max-width:600px){
+    .password-toggle{width:46px !important;height:46px !important;right:8px !important;font-size:21px !important;}
+}
+</style>
+
+
+<style id="mobile-star-no-lines-final-fix">
+@media (max-width:700px){
+    .constellation-svg{display:none !important;}
+    .star-connector,.star-connector.active,
+    .star-line,.star-line.active{
+        display:none !important;
+        opacity:0 !important;
+        visibility:hidden !important;
+    }
+}
+</style>
+
 </head> 
  
  
@@ -4667,7 +4711,15 @@ a few stories that belong to you. 💙
                 id="password" 
                 placeholder="Enter secret password" 
                 autocomplete="off" 
-            > 
+            >
+            <button 
+                type="button"
+                id="passwordToggle"
+                class="password-toggle"
+                onclick="togglePasswordVisibility()"
+                aria-label="Show password"
+                title="Show password"
+            >👁️</button> 
  
         </div> 
  
@@ -6888,6 +6940,26 @@ let countdownInterval;
    PASSWORD 
 ================================================= */ 
  
+
+/* PASSWORD VISIBILITY — EYE BUTTON */
+function togglePasswordVisibility() {
+    const input = document.getElementById("password");
+    const button = document.getElementById("passwordToggle");
+    if (!input || !button) return;
+
+    if (input.type === "password") {
+        input.type = "text";
+        button.textContent = "🙈";
+        button.setAttribute("aria-label", "Hide password");
+        button.setAttribute("title", "Hide password");
+    } else {
+        input.type = "password";
+        button.textContent = "👁️";
+        button.setAttribute("aria-label", "Show password");
+        button.setAttribute("title", "Show password");
+    }
+}
+
 function checkPassword() { 
  
     const password = 
@@ -7256,10 +7328,31 @@ function birthdayBack() {
    SHOW PAGE 
 ================================================= */ 
  
-function showPage(pageNumber) { 
- 
-    document 
-        .querySelectorAll(".page") 
+function showPage(pageNumber) {
+
+    /* STOP ALL MEDIA BEFORE CHANGING PAGE */
+    if (typeof birthdayAudio !== "undefined" && birthdayAudio) {
+        birthdayAudio.pause();
+        birthdayAudio.currentTime = 0;
+        if (typeof updateMusicButton === "function") {
+            updateMusicButton(false);
+        }
+        if (typeof musicProgressFill !== "undefined" && musicProgressFill) {
+            musicProgressFill.style.width = "0%";
+        }
+        if (typeof musicCurrent !== "undefined" && musicCurrent) {
+            musicCurrent.textContent = "0:00";
+        }
+    }
+
+    document.querySelectorAll("video").forEach(function(video) {
+        try {
+            video.pause();
+            video.currentTime = 0;
+        } catch (e) {}
+    });
+
+    document.querySelectorAll(".page") 
         .forEach(function(page) { 
  
             page.classList.remove( 
