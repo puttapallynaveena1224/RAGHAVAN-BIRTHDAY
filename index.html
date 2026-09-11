@@ -4517,6 +4517,107 @@ body {
 }
 </style>
 
+
+<style id="family-photo-final-fix">
+/* =========================================================
+   FINAL FAMILY PHOTO FIX — ALL PHOTOS + FULL DISPLAY
+========================================================= */
+.family-member-panel.show{
+  max-height:none !important;
+  height:auto !important;
+  overflow:visible !important;
+  padding:25px !important;
+}
+
+.family-member-photos{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:20px !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  overflow:visible !important;
+  align-items:start !important;
+}
+
+.family-member-photos img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  max-width:100% !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:#fff !important;
+  padding:5px !important;
+  border-radius:18px !important;
+}
+
+/* Keep the family main image completely visible */
+.family-photo-wrap{
+  height:auto !important;
+  max-height:none !important;
+  overflow:hidden !important;
+}
+.family-main-photo{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center !important;
+}
+
+/* Mobile: BOTH family photos remain visible, side-by-side,
+   while preserving their original proportions. */
+@media (max-width:700px){
+  .family-member-panel.show{
+    max-height:none !important;
+    height:auto !important;
+    overflow:visible !important;
+    padding:16px !important;
+  }
+
+  .family-member-photos{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+    width:100% !important;
+    overflow:visible !important;
+  }
+
+  .family-member-photos img{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    padding:3px !important;
+    border-radius:12px !important;
+  }
+
+  .family-member-matter{
+    font-size:17px !important;
+    line-height:1.6 !important;
+  }
+
+  .family-voice-video{
+    width:100% !important;
+    height:auto !important;
+  }
+}
+
+/* Very small phones: still show both photos */
+@media (max-width:390px){
+  .family-member-panel.show{padding:12px !important;}
+  .family-member-photos{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:8px !important;}
+  .family-member-photos img{padding:2px !important;border-radius:10px !important;}
+}
+</style>
 </head> 
  
  
