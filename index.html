@@ -4276,6 +4276,60 @@ body {
   .year-list{grid-template-columns:repeat(2,1fr)}
 }
 </style>
+
+<style id="final-mobile-photo-arrow-fix">
+/* ===== FINAL PHOTO FIX ===== */
+.family-main-photo{width:100% !important;height:auto !important;max-height:none !important;object-fit:contain !important;object-position:center !important;display:block !important;}
+.family-member-photos{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:20px !important;align-items:start !important;}
+.family-member-photos img{width:100% !important;height:auto !important;min-height:0 !important;max-height:none !important;object-fit:contain !important;object-position:center !important;display:block !important;}
+.photo-frame{height:auto !important;min-height:0 !important;display:flex !important;align-items:center !important;justify-content:center !important;overflow:hidden !important;}
+.photo-frame img{width:100% !important;height:auto !important;max-width:100% !important;max-height:none !important;object-fit:contain !important;object-position:center !important;display:block !important;}
+.book-photo-grid{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:18px !important;max-height:600px !important;overflow-y:auto !important;padding:8px !important;}
+.book-photo-card{width:100% !important;height:auto !important;overflow:hidden !important;}
+.book-photo-card img{display:block !important;width:100% !important;height:auto !important;min-height:0 !important;max-height:none !important;aspect-ratio:auto !important;object-fit:contain !important;object-position:center !important;}
+
+/* ===== FINAL MOBILE ARROW + HEART ===== */
+@media(max-width:700px){
+  #cinematicPage{width:100% !important;min-height:100dvh !important;height:100dvh !important;overflow:hidden !important;padding:12px 8px 10px !important;}
+  .cinematic-title{font-size:36px !important;line-height:1.05 !important;margin:3px auto 4px !important;width:96% !important;}
+  .arrow-divider{width:88% !important;font-size:23px !important;margin:0 auto 2px !important;}
+  .cinematic-subtitle{font-size:18px !important;line-height:1.1 !important;margin:0 auto !important;}
+  .cinematic-heart{left:64% !important;top:41% !important;transform:translate(-50%,-50%) !important;z-index:30 !important;}
+  .heart-shape{font-size:82px !important;line-height:1 !important;}
+  .cinematic-heart::before{width:155px !important;height:155px !important;}
+  .bow-area{left:-12px !important;bottom:96px !important;width:235px !important;height:255px !important;transform:none !important;transform-origin:center !important;z-index:22 !important;}
+  .sagittarius-bow{width:235px !important;height:255px !important;transform:translate(0,0) !important;}
+  .bow-string-overlay{width:235px !important;height:255px !important;transform:translate(-50%,-50%) !important;}
+  .arrow-svg{width:100% !important;height:100% !important;inset:0 !important;z-index:40 !important;}
+  .cinematic-hint{left:50% !important;bottom:72px !important;width:94% !important;font-size:16px !important;line-height:1.15 !important;z-index:45 !important;}
+  .enter-button{left:50% !important;bottom:8px !important;width:88vw !important;min-width:0 !important;min-height:50px !important;padding:9px 18px !important;font-size:20px !important;z-index:50 !important;}
+}
+@media(max-width:390px){
+  .cinematic-title{font-size:31px !important;}
+  .cinematic-subtitle{font-size:17px !important;}
+  .cinematic-heart{left:65% !important;top:40% !important;}
+  .heart-shape{font-size:72px !important;}
+  .cinematic-heart::before{width:135px !important;height:135px !important;}
+  .bow-area{left:-15px !important;bottom:94px !important;width:205px !important;height:225px !important;}
+  .sagittarius-bow{width:205px !important;height:225px !important;}
+  .bow-string-overlay{width:205px !important;height:225px !important;}
+  .cinematic-hint{bottom:70px !important;font-size:15px !important;}
+  .enter-button{width:90vw !important;min-height:48px !important;font-size:19px !important;}
+}
+
+/* ===== MOBILE MEMORY PHOTOS — ONE COMPLETE PHOTO PER ROW ===== */
+@media(max-width:600px){
+  .family-member-photos{grid-template-columns:1fr !important;gap:18px !important;}
+  .family-member-photos img{width:100% !important;height:auto !important;max-height:none !important;object-fit:contain !important;}
+  .friends-wall{grid-template-columns:1fr !important;width:96vw !important;padding:30px 12px 24px !important;gap:28px !important;}
+  .photo-frame{width:100% !important;max-width:350px !important;height:auto !important;min-height:0 !important;padding:8px !important;}
+  .photo-frame img{width:100% !important;height:auto !important;max-height:none !important;object-fit:contain !important;}
+  .book-photo-grid{grid-template-columns:1fr !important;max-height:none !important;overflow:visible !important;gap:18px !important;padding:5px !important;}
+  .book-photo-card{width:100% !important;height:auto !important;padding:7px 7px 12px !important;}
+  .book-photo-card img{width:100% !important;height:auto !important;max-height:none !important;object-fit:contain !important;}
+}
+</style>
+
 </head> 
  
  
